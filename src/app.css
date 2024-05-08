@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1 {
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl pb-5;
+  }
+
+  h2 {
+    @apply pb-2 text-3xl font-semibold tracking-tight transition-colors;
+  }
+  p {
+    @apply leading-7;
+  }
+}
