@@ -4,11 +4,11 @@
 
 @layer components {
   h1 {
-    @apply text-4xl font-playfair font-extrabold tracking-tight lg:text-5xl pb-5;
+    @apply text-8xl font-playfair tracking-normal;
   }
 
   h2 {
-    @apply pb-2 text-3xl font-semibold tracking-tight transition-colors;
+    @apply text-6xl tracking-tight transition-colors ;
   }
   p {
     @apply leading-7;
