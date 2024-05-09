@@ -22,6 +22,7 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
+		"iconify-icon": "^2.1.0",
 		"postcss": "^8.4.38",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -32,5 +33,10 @@
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"tailwind-merge": "^2.3.0",
+		"tailwind-variants": "^0.2.1"
+	}
 }
