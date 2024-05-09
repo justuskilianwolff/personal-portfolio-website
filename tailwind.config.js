@@ -5,15 +5,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				first: '#004A2F',
-				second: '#002F35',
-				third: '#FF6337',
-				fourth: '#FFA323'
+				// https://colorhunt.co/palette/f5efe7d8c4b64f709c213555
+				first: '#213555',
+				second: '#F5EFE7',
+				third: '#4F709C',
+				fourth: '#D8C4B6'
 			},
 			fontFamily: {
 				playfair: ['Playfair', 'serif']
 			}
-		}
-	},
-	plugins: []
+		},
+		plugins: []
+	}
 };
