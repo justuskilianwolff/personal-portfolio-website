@@ -4,7 +4,7 @@
 
 @layer components {
   h1 {
-    @apply text-4xl font-extrabold tracking-tight lg:text-5xl pb-5;
+    @apply text-4xl font-playfair font-extrabold tracking-tight lg:text-5xl pb-5;
   }
 
   h2 {
