@@ -9,6 +9,9 @@ export default {
 				second: '#002F35',
 				third: '#FF6337',
 				fourth: '#FFA323'
+			},
+			fontFamily: {
+				playfair: ['Playfair', 'serif']
 			}
 		}
 	},
