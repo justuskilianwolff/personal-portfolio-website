@@ -14,7 +14,7 @@
 
 <Card.Root
 	style={`height: ${height}rem`}
-	class="bg-second border-fourth border-2 mb-4 break-inside-avoid-column"
+	class="bg-second border-fourth border-2 mb-4 break-inside-avoid-column hover:scale-[1.02]"
 >
 	<Card.Header>
 		<Card.Title>{title}</Card.Title>
