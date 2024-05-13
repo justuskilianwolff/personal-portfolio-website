@@ -9,10 +9,13 @@
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
-	let height = getRandomNumber(14, 18);
+	let height = getRandomNumber(12, 24);
 </script>
 
-<Card.Root style={`height: ${height}rem`} class="bg-second mb-4 break-inside-avoid-column">
+<Card.Root
+	style={`height: ${height}rem`}
+	class="bg-second border-fourth border-2 mb-4 break-inside-avoid-column"
+>
 	<Card.Header>
 		<Card.Title>{title}</Card.Title>
 		<Card.Description>{description}</Card.Description>
