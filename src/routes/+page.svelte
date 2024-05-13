@@ -7,7 +7,7 @@
 	import SectionHeader from '$lib/SectionHeader.svelte';
 </script>
 
-<Section class="bg-second py-8">
+<Section class="bg-second pt-8">
 	<div class="flex flex-col gap-4 justify-between md:flex-row md:items-center md:gap-0">
 		<div class="flex flex-col">
 			<div class="flex flex-row">
@@ -25,6 +25,12 @@
 			the world of algorithms and data analysis. Let's explore together the fascinating realm where
 			Hamburg's charm intersects with cutting-edge technology. Let's get in touch :)
 		</p>
+	</div>
+	<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
+		<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
+		<iconify-icon icon="mdi:github" />
+		<iconify-icon icon="mdi:linkedin" />
+		<iconify-icon icon="mdi:instagram" />
 	</div>
 </Section>
 <Section class="bg-first">
@@ -53,11 +59,4 @@
 		<Card title="MOPTA" description="desc" content="content" footer="footer" />
 	</Masonry>
 </Section>
-<Section class="bg-second">
-	<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
-		<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
-		<iconify-icon icon="mdi:github" />
-		<iconify-icon icon="mdi:linkedin" />
-		<iconify-icon icon="mdi:instagram" />
-	</div>
-</Section>
+<Section class="bg-second"></Section>
