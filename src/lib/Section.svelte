@@ -2,7 +2,7 @@
 </script>
 
 <div {...$$restProps}>
-	<div class="max-w-6xl mx-auto">
+	<div class="max-w-5xl mx-auto pt-1 pb-4">
 		<slot />
 	</div>
 </div>
