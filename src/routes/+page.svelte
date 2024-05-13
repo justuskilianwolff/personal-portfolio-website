@@ -3,6 +3,7 @@
 	import HeaderPhoto from '$lib/HeaderPhoto.svelte';
 	import Section from '$lib/Section.svelte';
 	import Card from '$lib/Card.svelte';
+	import Masonry from '$lib/Masonry.svelte';
 </script>
 
 <Section backgroundColor="second">
@@ -26,23 +27,23 @@
 				in touch :)
 			</p>
 		</div>
-		<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
-			<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
-			<iconify-icon icon="mdi:github" />
-			<iconify-icon icon="mdi:linkedin" />
-			<iconify-icon icon="mdi:instagram" />
-		</div>
 	</div>
 </Section>
 <Section backgroundColor="first" class="bg-first pb-12">
 	<div class="px-5 py-10">
 		<h2 class="text-second">Projects</h2>
 	</div>
-
-	<div class="flex flex-wrap justify-evenly mx-4 gap-5">
+	<Masonry>
 		<Card title="MOPTA" description="desc" content="content" footer="footer" />
 		<Card title="MOPTA" description="desc" content="content" footer="footer" />
 		<Card title="MOPTA" description="desc" content="content" footer="footer" />
 		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-	</div>
+	</Masonry>
 </Section>
+
+<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
+	<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
+	<iconify-icon icon="mdi:github" />
+	<iconify-icon icon="mdi:linkedin" />
+	<iconify-icon icon="mdi:instagram" />
+</div>
