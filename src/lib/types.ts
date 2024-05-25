@@ -1,21 +1,26 @@
+type Translation = {
+	de: string;
+	en: string;
+};
+
 type Link = {
 	url: string;
-	title: string;
+	title: Translation;
 };
 type Image = {
 	url: string;
-	alt: string;
+	alt: Translation;
 	link: Link;
 };
 type Technology = {
-	name: string;
+	name: Translation;
 	logo: Image;
 };
 
 type Project = {
-	title: string;
-	subtitle: string;
-	description: string;
+	title: Translation;
+	subtitle: Translation;
+	description: Translation;
 	technologies: Technology[];
 	links: Link[];
 };
