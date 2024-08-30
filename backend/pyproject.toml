@@ -1,22 +1,18 @@
 [project]
-name = "python-template"
+name = "backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "The django backend for the personal website of Justus Kilian Wolff."
 authors = [
     { name = "Justus Kilian Wolff", email = "moin@justuskilianwolff.com" },
 ]
-dependencies = []
+dependencies = [
+    "django>=5.1",
+    "requests>=2.32.3",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 
 [project.optional-dependencies]
-codequality = [
-    "ruff>=0.4.2",
-    "pytest>=8.0.2",
-    "coverage>=7.4.2",
-    "vulture>=2.11",
-    "pylint>=3.1.0",
-]
 
 [build-system]
 requires = ["hatchling"]
@@ -24,20 +20,25 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = [
+        "ruff>=0.4.2",
+    "pytest>=8.0.2",
+    "coverage>=7.4.2",
+    "vulture>=2.11",
+    "pylint>=3.1.0",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/python_template"]
+packages = ["src/personal_website_backend"]
 
 [tool.ruff]
 line-length = 120
 respect-gitignore = false
 src = ["src"]
 extend-include = ["*.ipynb"]
-exclude = ["miscellaneous/autoencoders/schreyer/KDD_2019_Lab.ipynb", ".venv"]
 
 [tool.ruff.lint]
 extend-select = ["I"] # also sort imports etc
