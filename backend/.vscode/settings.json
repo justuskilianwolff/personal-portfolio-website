@@ -23,6 +23,7 @@
 
   // python
   "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.exclude": [".venv/**"],
   "python.testing.pytestArgs": ["tests"],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
