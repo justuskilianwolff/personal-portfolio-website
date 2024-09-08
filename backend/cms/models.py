@@ -1,13 +1,28 @@
 from django.db import models
 
+# type Translation = {
+# 	de: string;
+# 	en: string;
+# };
 
-class Product(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField(blank=True, null=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+# type Link = {
+# 	url: string;
+# 	title: Translation;
+# };
+# type Image = {
+# 	url: string;
+# 	alt: Translation;
+# 	link: Link;
+# };
+# type Technology = {
+# 	name: Translation;
+# 	logo: Image;
+# };
 
-    def get_discounted_price(self):
-        return float(self.price) * 0.9
-
-    def __str__(self):
-        return self.title
+# type Project = {
+# 	title: Translation;
+# 	subtitle: Translation;
+# 	description: Translation;
+# 	technologies: Technology[];
+# 	links: Link[];
+# };
