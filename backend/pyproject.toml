@@ -22,7 +22,7 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-        "ruff>=0.4.2",
+    "ruff>=0.4.2",
     "pytest>=8.0.2",
     "coverage>=7.4.2",
     "vulture>=2.11",
@@ -33,7 +33,7 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/personal_website_backend"]
+packages = ["src/backend"]
 
 [tool.ruff]
 line-length = 120
