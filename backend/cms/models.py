@@ -39,7 +39,19 @@ class PersonalInfo(SingletonModel):
         pass  # Prevent deletion of the single instance
 
     class Meta:
-        verbose_name_plural = "Personal Information"
+        verbose_name = "Personal Information"
+
+    def __str__(self):
+        return self.name
+
+
+class Technology(models.Model):
+    name = models.CharField(max_length=100)
+    iconify_logo = models.CharField(max_length=100)
+    link = models.URLField()
+
+    class Meta:
+        verbose_name_plural = "Technologies"
 
     def __str__(self):
         return self.name
