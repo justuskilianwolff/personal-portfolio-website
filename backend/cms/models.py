@@ -28,7 +28,6 @@ class PersonalInfo(SingletonModel):
     about = models.TextField()
     links = models.ManyToManyField("IconLinks")
 
-
     class Meta:
         verbose_name = "Personal Information"
 
