@@ -10,15 +10,6 @@ from solo.models import SingletonModel
 # 	url: string;
 # 	title: Translation;
 # };
-# type Image = {
-# 	url: string;
-# 	alt: Translation;
-# 	link: Link;
-# };
-# type Technology = {
-# 	name: Translation;
-# 	logo: Image;
-# };
 
 # type Project = {
 # 	title: Translation;
@@ -28,15 +19,15 @@ from solo.models import SingletonModel
 # 	links: Link[];
 # };
 
+# Projects, Work
+
 
 class PersonalInfo(SingletonModel):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     about = models.TextField()
-    # Add other fields as needed
+    links = models.ManyToManyField("IconLinks")
 
-    def delete(self, *args, **kwargs):
-        pass  # Prevent deletion of the single instance
 
     class Meta:
         verbose_name = "Personal Information"
@@ -45,13 +36,13 @@ class PersonalInfo(SingletonModel):
         return self.name
 
 
-class Technology(models.Model):
+class IconLinks(models.Model):
     name = models.CharField(max_length=100)
     iconify_logo = models.CharField(max_length=100)
     link = models.URLField()
 
     class Meta:
-        verbose_name_plural = "Technologies"
+        verbose_name_plural = "Icon Links"
 
     def __str__(self):
         return self.name
