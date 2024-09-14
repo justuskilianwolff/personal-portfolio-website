@@ -1,4 +1,5 @@
 from django.db import models
+from markdownx.models import MarkdownxField
 from solo.models import SingletonModel
 
 
@@ -49,7 +50,7 @@ class Milestone(models.Model):
 class Activity(models.Model):
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100)
-    description = models.TextField()
+    description = MarkdownxField()
 
     class Meta:
         abstract = True
