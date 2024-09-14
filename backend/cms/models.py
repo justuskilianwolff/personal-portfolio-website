@@ -21,7 +21,7 @@ class PersonalInfo(SingletonModel):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     about = models.TextField()
-    links = models.ManyToManyField("IconLinks")
+    links = models.ManyToManyField("IconLink")
 
     class Meta:
         verbose_name = "Personal Information"
@@ -30,13 +30,21 @@ class PersonalInfo(SingletonModel):
         return self.name
 
 
-class IconLinks(models.Model):
+class IconLink(models.Model):
     name = models.CharField(max_length=100)
     iconify_logo = models.CharField(max_length=100)
     link = models.URLField()
 
     class Meta:
         verbose_name_plural = "Icon Links"
+
+    def __str__(self):
+        return self.name
+
+
+class Link(models.Model):
+    url = models.URLField()
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
