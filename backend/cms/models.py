@@ -1,11 +1,6 @@
 from django.db import models
 from solo.models import SingletonModel
 
-# type Link = {
-# 	url: string;
-# 	title: Translation;
-# };
-
 # type Project = {
 # 	title: Translation;
 # 	subtitle: Translation;
@@ -14,7 +9,7 @@ from solo.models import SingletonModel
 # 	links: Link[];
 # };
 
-# Projects, Work
+# Projects, Work, milestones (CV)
 
 
 class PersonalInfo(SingletonModel):
@@ -33,6 +28,9 @@ class PersonalInfo(SingletonModel):
 class Link(models.Model):
     url = models.URLField()
     name = models.CharField(max_length=100)
+
+    class Meta:
+        abstract = False
 
     def __str__(self):
         return self.name
