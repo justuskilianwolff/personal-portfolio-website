@@ -4,26 +4,25 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('cms', '0002_personalinfo_delete_product'),
+        ("cms", "0002_personalinfo_delete_product"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Technology',
+            name="Technology",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('iconify_logo', models.CharField(max_length=100)),
-                ('link', models.URLField()),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=100)),
+                ("iconify_logo", models.CharField(max_length=100)),
+                ("link", models.URLField()),
             ],
             options={
-                'verbose_name_plural': 'Technologies',
+                "verbose_name_plural": "Technologies",
             },
         ),
         migrations.AlterModelOptions(
-            name='personalinfo',
-            options={'verbose_name': 'Personal Information'},
+            name="personalinfo",
+            options={"verbose_name": "Personal Information"},
         ),
     ]

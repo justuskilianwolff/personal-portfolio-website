@@ -4,25 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('cms', '0001_initial'),
+        ("cms", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PersonalInfo',
+            name="PersonalInfo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('email', models.EmailField(max_length=254)),
-                ('about', models.TextField()),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=100)),
+                ("email", models.EmailField(max_length=254)),
+                ("about", models.TextField()),
             ],
             options={
-                'verbose_name_plural': 'Personal Information',
+                "verbose_name_plural": "Personal Information",
             },
         ),
         migrations.DeleteModel(
-            name='Product',
+            name="Product",
         ),
     ]

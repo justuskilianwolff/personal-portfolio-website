@@ -2,7 +2,8 @@ from rest_framework import serializers
 
 from cms.models import PersonalInfo
 
-#TODO: fix
+# TODO: fix
+
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:

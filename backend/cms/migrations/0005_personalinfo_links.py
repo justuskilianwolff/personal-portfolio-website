@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('cms', '0004_rename_technology_iconlinks_alter_iconlinks_options'),
+        ("cms", "0004_rename_technology_iconlinks_alter_iconlinks_options"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='personalinfo',
-            name='links',
-            field=models.ManyToManyField(to='cms.iconlinks'),
+            model_name="personalinfo",
+            name="links",
+            field=models.ManyToManyField(to="cms.iconlinks"),
         ),
     ]

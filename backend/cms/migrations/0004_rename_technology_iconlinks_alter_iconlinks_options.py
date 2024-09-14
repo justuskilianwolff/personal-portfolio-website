@@ -4,18 +4,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('cms', '0003_technology_alter_personalinfo_options'),
+        ("cms", "0003_technology_alter_personalinfo_options"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='Technology',
-            new_name='IconLinks',
+            old_name="Technology",
+            new_name="IconLinks",
         ),
         migrations.AlterModelOptions(
-            name='iconlinks',
-            options={'verbose_name_plural': 'Icon Links'},
+            name="iconlinks",
+            options={"verbose_name_plural": "Icon Links"},
         ),
     ]

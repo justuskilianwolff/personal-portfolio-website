@@ -1,11 +1,6 @@
 from django.db import models
 from solo.models import SingletonModel
 
-# type Translation = {
-# 	de: string;
-# 	en: string;
-# };
-
 # type Link = {
 # 	url: string;
 # 	title: Translation;
