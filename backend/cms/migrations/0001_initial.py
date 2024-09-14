@@ -4,84 +4,82 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='IconLink',
+            name="IconLink",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('url', models.URLField()),
-                ('name', models.CharField(max_length=100)),
-                ('iconify_logo', models.CharField(max_length=100)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("url", models.URLField()),
+                ("name", models.CharField(max_length=100)),
+                ("iconify_logo", models.CharField(max_length=100)),
             ],
             options={
-                'verbose_name_plural': 'Icon Links',
+                "verbose_name_plural": "Icon Links",
             },
         ),
         migrations.CreateModel(
-            name='Milestone',
+            name="Milestone",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('date', models.DateField()),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("title", models.CharField(max_length=100)),
+                ("description", models.TextField()),
+                ("date", models.DateField()),
             ],
         ),
         migrations.CreateModel(
-            name='TextLink',
+            name="TextLink",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('url', models.URLField()),
-                ('name', models.CharField(max_length=100)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("url", models.URLField()),
+                ("name", models.CharField(max_length=100)),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.CreateModel(
-            name='PersonalInfo',
+            name="PersonalInfo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('email', models.EmailField(max_length=254)),
-                ('about', models.TextField()),
-                ('links', models.ManyToManyField(to='cms.iconlink')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=100)),
+                ("email", models.EmailField(max_length=254)),
+                ("about", models.TextField()),
+                ("links", models.ManyToManyField(to="cms.iconlink")),
             ],
             options={
-                'verbose_name': 'Personal Information',
+                "verbose_name": "Personal Information",
             },
         ),
         migrations.CreateModel(
-            name='Project',
+            name="Project",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('subtitle', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('technologies', models.ManyToManyField(related_name='projects_technologies', to='cms.iconlink')),
-                ('links', models.ManyToManyField(related_name='projects_links', to='cms.textlink')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("title", models.CharField(max_length=100)),
+                ("subtitle", models.CharField(max_length=100)),
+                ("description", models.TextField()),
+                ("technologies", models.ManyToManyField(related_name="projects_technologies", to="cms.iconlink")),
+                ("links", models.ManyToManyField(related_name="projects_links", to="cms.textlink")),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.CreateModel(
-            name='Work',
+            name="Work",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('subtitle', models.CharField(max_length=100)),
-                ('description', models.TextField()),
-                ('links', models.ManyToManyField(related_name='works_links', to='cms.textlink')),
-                ('technologies', models.ManyToManyField(related_name='works_technologies', to='cms.iconlink')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("title", models.CharField(max_length=100)),
+                ("subtitle", models.CharField(max_length=100)),
+                ("description", models.TextField()),
+                ("links", models.ManyToManyField(related_name="works_links", to="cms.textlink")),
+                ("technologies", models.ManyToManyField(related_name="works_technologies", to="cms.iconlink")),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]
