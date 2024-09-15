@@ -1,7 +1,15 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
-from .views import api_home
+from .views import MilestoneViewSet, PersonalInfoViewSet, ProjectViewSet, WorkViewSet
+
+router = DefaultRouter()
+router.register(r"personal-info", PersonalInfoViewSet)
+router.register(r"milestones", MilestoneViewSet)
+router.register(r"projects", ProjectViewSet)
+router.register(r"works", WorkViewSet)
+
 
 urlpatterns = [
-    path("", api_home, name="api_home"),
+    path("", include(router.urls)),
 ]
