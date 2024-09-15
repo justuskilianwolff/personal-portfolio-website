@@ -72,3 +72,6 @@ class Project(Activity):
 class Work(Activity):
     technologies = models.ManyToManyField("IconLink", related_name="works_technologies")
     links = models.ManyToManyField("TextLink", related_name="works_links")
+
+    class Meta:
+        verbose_name_plural = "Work"
