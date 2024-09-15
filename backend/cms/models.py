@@ -54,6 +54,8 @@ class Activity(models.Model):
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100)
     description = MarkdownxField()
+    technologies = models.ManyToManyField("IconLink")
+    links = models.ManyToManyField("TextLink")
 
     class Meta:
         abstract = True
