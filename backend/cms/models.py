@@ -7,7 +7,7 @@ class PersonalInfo(SingletonModel):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     about = models.TextField()
-    links = models.ManyToManyField("IconLink")
+    links = models.ManyToManyField("IconLink", blank=True)
 
     class Meta:
         verbose_name = "Personal Information"
