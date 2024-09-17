@@ -4,6 +4,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 export default {
 	darkMode: ['class'],
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	plugins: [require('daisyui')],
 	safelist: ['dark'],
 	theme: {
 		container: {
