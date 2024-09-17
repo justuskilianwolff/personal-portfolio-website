@@ -1,9 +1,13 @@
 <script lang="ts">
-	import * as Card from '$lib/components/ui/card';
-	export let title: string;
-	export let description: string;
-	export let content: string;
-	export let footer: string;
+	interface CardProps {
+		title: string;
+		subtitle?: string;
+		description: string;
+		technologies?: number; //TODO: update with real types
+		links?: number;
+	}
+
+	let { title, subtitle, description }: CardProps = $props();
 
 	function getRandomNumber(min: number, max: number): number {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -12,18 +16,17 @@
 	let height = getRandomNumber(12, 24);
 </script>
 
-<Card.Root
+<div
 	style={`height: ${height}rem`}
-	class="bg-second border-fourth border-2 mb-4 break-inside-avoid-column hover:scale-[1.02]"
+	class="card bg-second border-fourth border-2 mb-4 break-inside-avoid-column hover:scale-[1.02]"
 >
-	<Card.Header>
-		<Card.Title>{title}</Card.Title>
-		<Card.Description>{description}</Card.Description>
-	</Card.Header>
-	<Card.Content>
-		<p>{content}</p>
-	</Card.Content>
-	<Card.Footer>
-		<p>{footer}</p>
-	</Card.Footer>
-</Card.Root>
+	<div class="card-body">
+		<div class="card-title">
+			<p>{title}</p>
+			{subtitle}
+		</div>
+		<div class="card-content">
+			{description}
+		</div>
+	</div>
+</div>
