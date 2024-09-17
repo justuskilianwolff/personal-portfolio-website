@@ -1,6 +1,5 @@
 <script lang="ts">
 	import 'iconify-icon';
-	import HeaderPhoto from '$lib/HeaderPhoto.svelte';
 	import Section from '$lib/Section.svelte';
 	import Card from '$lib/Card.svelte';
 	import Masonry from '$lib/Masonry.svelte';
@@ -11,7 +10,6 @@
 	<div class="flex flex-col gap-4 justify-between md:flex-row md:items-center md:gap-0">
 		<div class="flex flex-col">
 			<div class="flex flex-row">
-				<HeaderPhoto />
 				<div class="flex flex-col">
 					<h1 class=" text-first pl-1">Justus</h1>
 					<h1 class=" text-first pl-5 italic tracking-tight">Kilian</h1>
@@ -36,27 +34,27 @@
 <Section class="bg-first">
 	<SectionHeader heading="Projects" class="text-second" />
 	<Masonry>
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
 	</Masonry>
 </Section>
 <Section class="bg-second">
 	<SectionHeader heading="Work" class="text-first" />
 	<Masonry>
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
+		<Card title="MOPTA" description="desc" />
 	</Masonry>
 </Section>
 <Section class="bg-second"></Section>
