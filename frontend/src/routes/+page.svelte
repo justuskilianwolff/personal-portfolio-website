@@ -1,9 +1,13 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import Section from '$lib/Section.svelte';
-	import Card from '$lib/Card.svelte';
+	import Dialog from '$lib/Dialog.svelte';
 	import Masonry from '$lib/Masonry.svelte';
 	import SectionHeader from '$lib/SectionHeader.svelte';
+
+	import { project } from '$lib/example.ts';
+
+	const items = Array(5).fill(null);
 </script>
 
 <Section class="bg-second pt-8">
@@ -26,35 +30,37 @@
 	</div>
 	<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
 		<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
-		<iconify-icon icon="mdi:github" />
-		<iconify-icon icon="mdi:linkedin" />
-		<iconify-icon icon="mdi:instagram" />
+		<iconify-icon icon="mdi:github"> </iconify-icon>
+		<iconify-icon icon="mdi:linkedin"> </iconify-icon>
+		<iconify-icon icon="mdi:instagram"> </iconify-icon>
 	</div>
 </Section>
 <Section class="bg-first">
 	<SectionHeader heading="Projects" class="text-second" />
 	<Masonry>
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
+		{#each items as _, i}
+			<Dialog
+				title={project.title}
+				subtitle={project.subtitle}
+				description={project.description}
+				technologies={project.technologies}
+				links={project.links}
+			/>
+		{/each}
 	</Masonry>
 </Section>
 <Section class="bg-second">
 	<SectionHeader heading="Work" class="text-first" />
 	<Masonry>
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
-		<Card title="MOPTA" description="desc" />
+		{#each items as _, i}
+			<Dialog
+				title={project.title}
+				subtitle={project.subtitle}
+				description={project.description}
+				technologies={project.technologies}
+				links={project.links}
+			/>
+		{/each}
 	</Masonry>
 </Section>
 <Section class="bg-second"></Section>
