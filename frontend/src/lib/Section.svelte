@@ -1,8 +1,11 @@
 <script lang="ts">
+	interface Props { [key: string]: any }
+
+	let { children, ...rest }: Props = $props();
 </script>
 
-<div {...$$restProps}>
+<div {...rest}>
 	<div class="max-w-5xl mx-auto pt-1 pb-8 px-4">
-		<slot />
+		{@render children?.()}
 	</div>
 </div>

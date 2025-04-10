@@ -6,6 +6,7 @@
 	import SectionHeader from '$lib/SectionHeader.svelte';
 
 	import { project } from '$lib/example.ts';
+	import Timeline from '$lib/Timeline.svelte';
 
 	const items = Array(5).fill(null);
 </script>
@@ -35,8 +36,15 @@
 		<iconify-icon icon="mdi:instagram"> </iconify-icon>
 	</div>
 </Section>
+<Section class="bg-second">
+	<SectionHeader heading="Life" class="text-second" />
+	<div class="flex justify-center">
+		<Timeline />
+	</div>
+</Section>
 <Section class="bg-first">
 	<SectionHeader heading="Projects" class="text-second" />
+
 	<Masonry>
 		{#each items as _, i}
 			<Dialog
