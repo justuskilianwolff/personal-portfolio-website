@@ -1,7 +1,7 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import Section from '$lib/Section.svelte';
-	import Dialog from '$lib/Dialog.svelte';
+	import Card from '$lib/Card.svelte';
 	import Masonry from '$lib/Masonry.svelte';
 	import SectionHeader from '$lib/SectionHeader.svelte';
 
@@ -29,6 +29,12 @@
 			Hamburg's charm intersects with cutting-edge technology. Let's get in touch :)
 		</p>
 	</div>
+</Section>
+<Section class="bg-second">
+	<SectionHeader heading="About me" class="text-first" />
+	<div class="flex justify-center">
+		<Timeline />
+	</div>
 	<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
 		<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
 		<iconify-icon icon="mdi:github"> </iconify-icon>
@@ -36,19 +42,13 @@
 		<iconify-icon icon="mdi:instagram"> </iconify-icon>
 	</div>
 </Section>
-<Section class="bg-second">
-	<SectionHeader heading="Life" class="text-second" />
-	<div class="flex justify-center">
-		<Timeline />
-	</div>
-</Section>
 <Section class="bg-first">
 	<SectionHeader heading="Projects" class="text-second" />
 
 	<Masonry>
 		{#each items as _, i}
-			<Dialog
-				title={project.title}
+			<Card
+				title={`Tile ${i + 1}`}
 				subtitle={project.subtitle}
 				description={project.description}
 				technologies={project.technologies}
@@ -61,7 +61,7 @@
 	<SectionHeader heading="Work" class="text-first" />
 	<Masonry>
 		{#each items as _, i}
-			<Dialog
+			<Card
 				title={project.title}
 				subtitle={project.subtitle}
 				description={project.description}

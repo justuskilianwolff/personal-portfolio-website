@@ -1,57 +1,36 @@
 <script lang="ts">
 	import type { Activity } from './types.js';
+	import Card from './Card.svelte';
+	import { Dialog, Label, Separator } from 'bits-ui';
+	import { fade } from 'svelte/transition';
 	import 'iconify-icon';
+	import CardPreview from './CardPreview.svelte';
 
-	// Create a new type that includes only the specified propertie
-
-	let {
-		title,
-		subtitle,
-		description,
-		technologies,
-		links,
-		preview
-	}: Activity & { preview: boolean } = $props();
-
-	function getRandomNumber(min: number, max: number): number {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-
-	let outerclass = $derived.by(() => {
-		let default_class = 'card bg-second w-full';
-
-		if (preview) {
-			default_class += ' break-inside-avoid mb-4 hover:scale-[1.01]';
-
-			return default_class;
-		}
-	});
-
-	let style = $derived.by(() => {
-		let default_style = '';
-
-		if (preview) {
-			let height = getRandomNumber(18, 22);
-			default_style = `height: ${height}rem;`;
-
-			return default_style;
-		}
-	});
+	let { title, subtitle, description, technologies, links }: Activity = $props();
 </script>
 
-<div class={outerclass} {style}>
-	<div class="card-body text-left text-first flex overflow-hidden pb-6">
-		<div class="card-title">
-				<h4>{title}</h4>
-			<h3 class="italic">{subtitle}</h3>
-		</div>
-		<div class="card-content grow overflow-hidden text-ellipsis">
-			{description}
-		</div>
-		{#if preview}
-			<div class="card-actions justify-end">
-				<iconify-icon icon="majesticons:arrow-right"> </iconify-icon>
+<Dialog.Root>
+	<Dialog.Trigger>
+		<CardPreview {title} {description} />
+	</Dialog.Trigger>
+	<Dialog.Portal>
+		<!-- background overlay -->
+		<Dialog.Overlay class="fixed inset-0 z-0 bg-black/80" />
+		<Dialog.Content
+			class="z-50 max-w-4xl w-full fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-4"
+		>
+			<div class="card bg-second flex mb-4">
+				<div class="card-title"></div>
+				<h3 class="mb-2">{title}</h3>
+				<h4 class="text-sm text-gray-500">{subtitle}</h4>
+
+				<div class="grow overflow-hidden text-ellipsis whitespace-nowrap">
+					{description}
+				</div>
+				<div class="card-actions justify-end">
+					<iconify-icon icon="majesticons:arrow-right"> </iconify-icon>
+				</div>
 			</div>
-		{/if}
-	</div>
-</div>
+		</Dialog.Content>
+	</Dialog.Portal>
+</Dialog.Root>
