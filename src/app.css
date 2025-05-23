@@ -2,15 +2,24 @@
 @plugin '@tailwindcss/typography';
 @plugin "daisyui";
 
-/* Global styles for black background and white text */
+/* Use a modern sans-serif font as default */
 html,
 body {
-  background-color: #090b10;
-  color: #ffffff;
+	background-color: #090b10;
+	color: #ffffff;
+	font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
 }
 
 /* Ensure all elements inherit the white text color by default */
 * {
-  color: inherit;
+	color: inherit;
 }
 
+/* Default formatting for h1 and h2 using Tailwind utility classes */
+h1 {
+	@apply text-lg font-semibold;
+}
+
+h2 {
+	@apply font-mono;
+}
