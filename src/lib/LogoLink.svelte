@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Linkedin, Github, Twitter, Mail } from '@lucide/svelte';
+  import { Linkedin, Github, Twitter, Mail, Instagram } from '@lucide/svelte';
 
   let { text, url, icon }: { text: string; url: string; icon?: string } = $props();
 
   const iconMap = {
     linkedin: Linkedin,
     github: Github,
-    twitter: Twitter,
+    instagram: Instagram,
     mail: Mail
   };
 
