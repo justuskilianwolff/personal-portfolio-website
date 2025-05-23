@@ -1,2 +1,15 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+/* Global styles for black background and white text */
+html,
+body {
+  background-color: #090b10;
+  color: #ffffff;
+}
+
+/* Ensure all elements inherit the white text color by default */
+* {
+  color: inherit;
+}
+
