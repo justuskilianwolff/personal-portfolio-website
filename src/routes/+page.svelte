@@ -1,62 +1,38 @@
 <script lang="ts">
-	import 'iconify-icon';
-	import HeaderPhoto from '$lib/HeaderPhoto.svelte';
-	import Section from '$lib/Section.svelte';
-	import Card from '$lib/Card.svelte';
-	import Masonry from '$lib/Masonry.svelte';
-	import SectionHeader from '$lib/SectionHeader.svelte';
+	import LogoLink from '$lib/LogoLink.svelte';
+	import Tab from '$lib/Tab.svelte';
+	import TabGroup from '$lib/TabGroup.svelte';
 </script>
 
-<Section class="bg-second pt-8">
-	<div class="flex flex-col gap-4 justify-between md:flex-row md:items-center md:gap-0">
-		<div class="flex flex-col">
-			<div class="flex flex-row">
-				<HeaderPhoto />
-				<div class="flex flex-col">
-					<h1 class=" text-first pl-1">Justus</h1>
-					<h1 class=" text-first pl-5 italic tracking-tight">Kilian</h1>
-				</div>
-			</div>
-			<h1 class=" text-first pl-12 py-0 font-bold tracking-wide">Wolff</h1>
+<div class="profile-header flex items-center">
+	<div class="avatar mr-4">
+		<div class="w-24 rounded-full">
+			<img
+				src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp"
+				alt="Justus Kilian Wolff"
+			/>
 		</div>
-		<p class="text-first px-4 max-w-80 md:text-right">
-			Welcome to Max's corner, where Hamburg meets machine learning! As a student from this vibrant
-			city, Max is passionate about unraveling the mysteries of AI. Join him on his journey through
-			the world of algorithms and data analysis. Let's explore together the fascinating realm where
-			Hamburg's charm intersects with cutting-edge technology. Let's get in touch :)
-		</p>
 	</div>
-	<div class=" pt-10 pb-4 flex flex-row justify-center gap-10 items-center">
-		<a href="mailto:moin@justuskilianwolff.io">moin@justuskilianwolff.io</a>
-		<iconify-icon icon="mdi:github" />
-		<iconify-icon icon="mdi:linkedin" />
-		<iconify-icon icon="mdi:instagram" />
+	<div>
+		<h1>Justus Kilian Wolff</h1>
+		<h2>Hamburg, Germany</h2>
+		<div class="mt-2 flex max-w-100 flex-wrap gap-x-2 gap-y-1.5">
+			<LogoLink url="https://www.linkedin.com/in/justus-kilian-wolff/" icon="linkedin" />
+			<LogoLink url="https://github.com/justuskilianwolff" icon="github" />
+			<LogoLink url="https://www.instagram.com/justuskilianwolff/" icon="instagram" />
+			<LogoLink url="mailto:hi@justuskilianwolff.com" icon="mail" />
+		</div>
 	</div>
-</Section>
-<Section class="bg-first">
-	<SectionHeader heading="Projects" class="text-second" />
-	<Masonry>
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-	</Masonry>
-</Section>
-<Section class="bg-second">
-	<SectionHeader heading="Work" class="text-first" />
-	<Masonry>
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-		<Card title="MOPTA" description="desc" content="content" footer="footer" />
-	</Masonry>
-</Section>
-<Section class="bg-second"></Section>
+</div>
+
+<p class="mt-4">
+	Hey, I am Justus and welcome to my personal website. I am a software engineer and I love to build
+	things. I am currently working at a startup in the field of AI and machine learning. In my free
+	time, I enjoy hiking, reading, and playing video games. Feel free to reach out to me on LinkedIn
+	or Twitter!
+</p>
+
+<TabGroup>
+	<Tab header="first" content="first content" checked={true}></Tab>
+	<Tab header="second" content="second content" checked={false}></Tab>
+</TabGroup>
