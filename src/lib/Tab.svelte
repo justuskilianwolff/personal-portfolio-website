@@ -1,3 +1,13 @@
-<input type="radio" name="my_tabs" class="tab" aria-label="Curriculum Vitae" checked="checked" />
+<script lang="ts">
+	let {
+		header,
+		content,
+		checked = false
+	}: { header: string; content: string; checked?: boolean } = $props();
+</script>
 
-<div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
+<input type="radio" name="my_tabs" class="tab" aria-label={header} {checked} />
+
+<div class="tab-content p-10">
+	{@html content}
+</div>
