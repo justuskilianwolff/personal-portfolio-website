@@ -25,3 +25,6 @@ vite.config.ts.timestamp-*
 
 # vscode
 .vscode
+
+# roo code
+.roo
