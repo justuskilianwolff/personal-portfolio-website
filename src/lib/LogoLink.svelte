@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Linkedin, Github, Mail, Instagram } from '@lucide/svelte';
+	import { Github, Instagram, Linkedin, Mail } from '@lucide/svelte';
 
 	let { url, icon }: { url: string; icon?: string } = $props();
 

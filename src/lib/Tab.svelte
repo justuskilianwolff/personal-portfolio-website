@@ -1,13 +1,18 @@
 <script lang="ts">
+	import TimelineEvent from '$lib/TimelineEvent.svelte';
+	import type { TimelineEvent as TimelineEventType } from '$lib/types';
+
 	let {
 		header,
-		content,
+		events,
 		checked = false
-	}: { header: string; content: string; checked?: boolean } = $props();
+	}: { header: string; events: TimelineEventType[]; checked?: boolean } = $props();
 </script>
 
 <input type="radio" name="my_tabs" class="tab" aria-label={header} {checked} />
 
 <div class="tab-content p-10">
-	{@html content}
+	{#each events as event}
+		<TimelineEvent {event} />
+	{/each}
 </div>

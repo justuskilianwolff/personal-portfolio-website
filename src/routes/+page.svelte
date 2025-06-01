@@ -2,6 +2,9 @@
 	import LogoLink from '$lib/LogoLink.svelte';
 	import Tab from '$lib/Tab.svelte';
 	import TabGroup from '$lib/TabGroup.svelte';
+	import { educationHistory } from '$lib/data/education';
+	import { projects } from '$lib/data/projects';
+	import { workExperience } from '$lib/data/work';
 </script>
 
 <div class="profile-header flex items-center">
@@ -33,6 +36,7 @@
 </p>
 
 <TabGroup>
-	<Tab header="first" content="first content" checked={true}></Tab>
-	<Tab header="second" content="second content" checked={false}></Tab>
+	<Tab header="Work Experience" events={workExperience} checked={true}></Tab>
+	<Tab header="Education" events={educationHistory}></Tab>
+	<Tab header="Projects" events={projects}></Tab>
 </TabGroup>

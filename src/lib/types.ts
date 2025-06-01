@@ -1,26 +1,34 @@
-type Translation = {
-	de: string;
-	en: string;
+export type Link = {
+	url: string;
+	title: string;
 };
 
-type Link = {
+export type Image = {
 	url: string;
-	title: Translation;
-};
-type Image = {
-	url: string;
-	alt: Translation;
-	link: Link;
-};
-type Technology = {
-	name: Translation;
-	logo: Image;
+	alt: string;
+	link?: Link;
 };
 
-type Project = {
-	title: Translation;
-	subtitle: Translation;
-	description: Translation;
-	technologies: Technology[];
-	links: Link[];
+export type Technology = {
+	name: string;
+	logo?: Image; // Image was already updated, made optional
+};
+
+// Old Project type removed
+
+export type TimelineEvent = {
+	id: string; // Unique identifier
+	eventType: 'work' | 'education' | 'project'; // Category
+
+	title: string;
+	subtitle?: string;
+	organization?: string; // e.g., Company Name, University
+	description: string;
+
+	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
+
+	technologies?: Technology[];
+	links?: Link[];
+	logo?: Image; // e.g., company/university/project logo
+	location?: string; // Optional location field
 };
