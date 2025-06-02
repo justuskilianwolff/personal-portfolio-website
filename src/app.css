@@ -17,9 +17,17 @@ body {
 
 /* Default formatting for h1 and h2 using Tailwind utility classes */
 h1 {
-	@apply text-lg font-semibold;
+	@apply text-2xl font-semibold;
 }
 
 h2 {
+	@apply text-xl font-semibold;
+}
+
+h3 {
+	@apply text-base;
+}
+
+h4 {
 	@apply font-mono;
 }
