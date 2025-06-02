@@ -1,7 +1,12 @@
 export type Link = {
 	url: string;
-	title: string;
+	text?: string; // Optional text for the link, e.g., 'GitHub', 'LinkedIn'
 };
+
+export type Icon = {
+	name: string; // e.g., 'github', 'linkedin'
+};
+export type IconLink = Link & Icon;
 
 export type Image = {
 	url: string;
@@ -11,10 +16,8 @@ export type Image = {
 
 export type Technology = {
 	name: string;
-	logo?: Image; // Image was already updated, made optional
+	logo?: IconLink;
 };
-
-// Old Project type removed
 
 export type TimelineEvent = {
 	id: string; // Unique identifier
@@ -23,12 +26,10 @@ export type TimelineEvent = {
 	title: string;
 	subtitle?: string;
 	organization?: string; // e.g., Company Name, University
-	description: string;
 
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
+	description: string;
 
 	technologies?: Technology[];
-	links?: Link[];
-	logo?: Image; // e.g., company/university/project logo
-	location?: string; // Optional location field
+	links?: IconLink[];
 };

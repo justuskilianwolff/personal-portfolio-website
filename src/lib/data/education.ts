@@ -11,12 +11,10 @@ export const educationHistory: TimelineEvent[] = [
 			'Thesis on "Scalable Machine Learning Algorithms". Courses included Deep Learning, Natural Language Processing, and Big Data Analytics.',
 		time: 'Oct 2016 - Sep 2018',
 		technologies: [
-			{ name: 'Python', logo: { url: '/logos/python.png', alt: 'Python Logo' } },
+			{ name: 'Python', logo: { name: 'Python', url: '/logos/python.png' } },
 			{ name: 'TensorFlow' },
 			{ name: 'Scikit-learn' }
 		],
-		logo: { url: '/logos/uat.png', alt: 'University of Advanced Technology Logo' },
-		location: 'Munich, Germany'
 	},
 	{
 		id: 'edu2',
@@ -28,7 +26,5 @@ export const educationHistory: TimelineEvent[] = [
 			'Graduated with honors. Final project involved building a full-stack e-commerce platform.',
 		time: 'Oct 2013 - Sep 2016',
 		technologies: [{ name: 'Java' }, { name: 'JavaScript' }, { name: 'SQL' }],
-		logo: { url: '/logos/tci.png', alt: 'Technical College of Innovation Logo' },
-		location: 'Stuttgart, Germany'
 	}
 ];

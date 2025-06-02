@@ -11,14 +11,12 @@ export const workExperience: TimelineEvent[] = [
 			'Responsible for architecting and implementing new features, mentoring junior developers, and improving code quality and performance. Specialized in Svelte and TypeScript.',
 		time: 'Jan 2021 - Present',
 		technologies: [
-			{ name: 'Svelte', logo: { url: '/logos/svelte.png', alt: 'Svelte Logo' } },
-			{ name: 'TypeScript', logo: { url: '/logos/typescript.png', alt: 'TypeScript Logo' } },
+			{ name: 'Svelte', logo: { name: 'Svelte', url: '/logos/svelte.png' } },
+			{ name: 'TypeScript', logo: { name: 'TypeScript', url: '/logos/typescript.png' } },
 			{ name: 'Node.js' },
 			{ name: 'GraphQL' }
 		],
-		links: [{ url: 'https://innovatech.example.com', title: 'Innovatech Website' }],
-		logo: { url: '/logos/innovatech.png', alt: 'Innovatech Solutions Logo' },
-		location: 'Berlin, Germany'
+		links: [{ name: 'Innovatech Website', url: 'https://innovatech.example.com' }]
 	},
 	{
 		id: 'work2',
@@ -30,11 +28,10 @@ export const workExperience: TimelineEvent[] = [
 			'Developed and maintained web applications for a diverse range of clients, utilizing PHP, JavaScript (React, Vue), and Python. Gained experience in agile methodologies and client communication.',
 		time: 'Jun 2018 - Dec 2020',
 		technologies: [
-			{ name: 'React', logo: { url: '/logos/react.png', alt: 'React Logo' } },
+			{ name: 'React', logo: { name: 'React', url: '/logos/react.png' } },
 			{ name: 'JavaScript' },
 			{ name: 'PHP' },
 			{ name: 'Python' }
-		],
-		location: 'Hamburg, Germany'
+		]
 	}
 ];

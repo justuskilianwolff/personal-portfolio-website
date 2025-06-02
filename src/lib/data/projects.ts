@@ -11,16 +11,14 @@ export const projects: TimelineEvent[] = [
 			'The very website you are currently viewing. Designed to be fast, accessible, and easily updatable with new experiences and projects. Leverages TypeScript for type safety and SvelteKit for a modern development experience.',
 		time: 'May 2024 - Present',
 		technologies: [
-			{ name: 'SvelteKit', logo: { url: '/logos/sveltekit.png', alt: 'SvelteKit Logo' } },
-			{ name: 'TypeScript', logo: { url: '/logos/typescript.png', alt: 'TypeScript Logo' } },
+			{ name: 'SvelteKit', logo: { name: 'SvelteKit', url: '/logos/sveltekit.png' } },
+			{ name: 'TypeScript', logo: { name: 'TypeScript', url: '/logos/typescript.png' } },
 			{ name: 'HTML5' },
 			{ name: 'CSS3' }
 		],
 		links: [
-			{ url: 'https://github.com/yourusername/personal-website', title: 'GitHub Repository' }
+			{ name: 'GitHub Repository', url: 'https://github.com/yourusername/personal-website' }
 		],
-		logo: { url: '/logos/portfolio.png', alt: 'Portfolio Project Logo' },
-		location: 'Online'
 	},
 	{
 		id: 'proj2',
@@ -34,10 +32,9 @@ export const projects: TimelineEvent[] = [
 		technologies: [{ name: 'JavaScript (ES6+)' }, { name: 'Jest' }, { name: 'Git & GitHub' }],
 		links: [
 			{
-				url: 'https://github.com/awesomelib/awesomelib/pulls?q=is%3Apr+author%3Ayourusername',
-				title: 'My Pull Requests'
+				name: 'My Pull Requests',
+				url: 'https://github.com/awesomelib/awesomelib/pulls?q=is%3Apr+author%3Ayourusername'
 			}
-		],
-		location: 'Online'
+		]
 	}
 ];

@@ -24,14 +24,8 @@
 	{#if event.links && event.links.length > 0}
 		<ul class="mt-2">
 			{#each event.links as link}
-				<li><a href={link.url} class="text-blue-600 hover:underline">{link.title}</a></li>
+				<li><a href={link.url} class="text-blue-600 hover:underline">{link.name}</a></li>
 			{/each}
 		</ul>
-	{/if}
-	{#if event.logo}
-		<img src={event.logo.url} alt={event.logo.alt} class="mt-2 max-h-12" />
-	{/if}
-	{#if event.location}
-		<p class="text-gray-500">{event.location}</p>
 	{/if}
 </div>
