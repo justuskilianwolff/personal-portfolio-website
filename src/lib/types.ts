@@ -25,7 +25,6 @@ export type TimelineEvent = {
 
 	title: string;
 	subtitle?: string;
-	organization?: string; // e.g., Company Name, University
 
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
 	description: string;
