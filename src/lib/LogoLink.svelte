@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Github, Instagram, Linkedin, Mail } from '@lucide/svelte';
+	import { Github, Instagram, Linkedin, Loader, Mail } from '@lucide/svelte';
 
-	let { url, icon }: { url: string; icon?: string } = $props();
+	let { url, name: icon }: { url: string; name: string } = $props();
 
 	const iconMap = {
 		linkedin: Linkedin,
@@ -10,13 +10,9 @@
 		mail: Mail
 	};
 
-	const IconComponent = $derived(
-		icon && iconMap[icon as keyof typeof iconMap] ? iconMap[icon as keyof typeof iconMap] : null
-	);
+	const IconComponent = icon in iconMap ? iconMap[icon as keyof typeof iconMap] : Loader;
 </script>
 
 <a href={url} class="badge badge-md gap-2 rounded-full">
-	{#if IconComponent}
-		<IconComponent size={16} />
-	{/if}
+	<IconComponent size={16} />
 </a>
