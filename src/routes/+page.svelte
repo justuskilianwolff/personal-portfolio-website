@@ -20,10 +20,10 @@
 		<h1>Justus Kilian Wolff</h1>
 		<h2>Hamburg, Germany</h2>
 		<div class="mt-2 flex max-w-100 flex-wrap gap-x-2 gap-y-1.5">
-			<LogoLink url="https://www.linkedin.com/in/justus-kilian-wolff/" icon="linkedin" />
-			<LogoLink url="https://github.com/justuskilianwolff" icon="github" />
-			<LogoLink url="https://www.instagram.com/justuskilianwolff/" icon="instagram" />
-			<LogoLink url="mailto:hi@justuskilianwolff.com" icon="mail" />
+			<LogoLink url="https://www.linkedin.com/in/justus-kilian-wolff/" name="linkedin" />
+			<LogoLink url="https://github.com/justuskilianwolff" name="github" />
+			<LogoLink url="https://www.instagram.com/justuskilianwolff/" name="instagram" />
+			<LogoLink url="mailto:hi@justuskilianwolff.com" name="mail" />
 		</div>
 	</div>
 </div>
