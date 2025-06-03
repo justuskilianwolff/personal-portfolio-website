@@ -4,20 +4,9 @@ export type Link = {
 };
 
 export type Icon = {
-	name: string; // e.g., 'github', 'linkedin'
+	identifier: string; // e.g., 'github', 'linkedin'
 };
 export type IconLink = Link & Icon;
-
-export type Image = {
-	url: string;
-	alt: string;
-	link?: Link;
-};
-
-export type Technology = {
-	name: string;
-	logo?: IconLink;
-};
 
 export type TimelineEvent = {
 	id: string; // Unique identifier
@@ -29,6 +18,6 @@ export type TimelineEvent = {
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
 	description: string;
 
-	technologies?: Technology[];
+	technologies?: IconLink[];
 	links?: IconLink[];
 };

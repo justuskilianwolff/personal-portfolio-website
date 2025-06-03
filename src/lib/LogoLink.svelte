@@ -1,22 +1,23 @@
 <script lang="ts">
-	import { Github, Instagram, Linkedin, Loader, Mail } from '@lucide/svelte';
+	import Icon from '@iconify/svelte';
 
-	let { url, name: icon, text }: { url: string; name: string; text?: string } = $props();
+	let { url, identifier, text }: { url: string; identifier: string; text?: string } = $props();
 
 	const iconMap = {
-		linkedin: Linkedin,
-		github: Github,
-		instagram: Instagram,
-		mail: Mail
+		linkedin: 'mdi:linkedin',
+		github: 'mdi:github',
+		instagram: 'mdi:instagram',
+		mail: 'material-symbols:mail-outline',
+		svelte: 'lineicons:svelte'
 	};
-
-	const IconComponent = $derived(
-		icon && iconMap[icon as keyof typeof iconMap] ? iconMap[icon as keyof typeof iconMap] : Loader
-	);
+	const iconIdentifier =
+		identifier && iconMap[identifier as keyof typeof iconMap]
+			? iconMap[identifier as keyof typeof iconMap]
+			: identifier;
 </script>
 
-<a href={url} class="badge badge-md gap-2 border-inherit">
-	<IconComponent size={16} />
+<a href={url} class="badge badge-neutral badge-outline badge-md gap-2 border-inherit">
+	<Icon icon={iconIdentifier} class="text-inherit" />
 	{#if text}
 		{text}
 	{/if}
