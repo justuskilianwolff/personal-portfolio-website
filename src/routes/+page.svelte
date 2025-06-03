@@ -19,7 +19,7 @@
 	<div>
 		<h1>Justus Kilian Wolff</h1>
 		<h3>Hamburg, Germany</h3>
-		<div class="mt-2 flex max-w-100 flex-wrap gap-x-2 gap-y-1.5">
+		<div class="my-4 flex max-w-100 flex-wrap gap-4">
 			<LogoLink url="https://www.linkedin.com/in/justus-kilian-wolff/" identifier="linkedin" />
 			<LogoLink url="https://github.com/justuskilianwolff" identifier="github" />
 			<LogoLink url="https://www.instagram.com/justuskilianwolff/" identifier="instagram" />
