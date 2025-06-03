@@ -16,8 +16,8 @@
 			: identifier;
 </script>
 
-<a href={url} class="badge badge-neutral badge-outline badge-md gap-2 border-inherit">
-	<Icon icon={iconIdentifier} class="text-inherit" />
+<a href={url} class="flex items-center gap-2">
+	<Icon icon={iconIdentifier} class="h-6 w-6" />
 	{#if text}
 		{text}
 	{/if}
