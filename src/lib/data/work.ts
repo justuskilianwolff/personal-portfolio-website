@@ -2,24 +2,20 @@ import type { TimelineEvent } from '../types';
 
 export const workExperience: TimelineEvent[] = [
 	{
-		id: 'work1',
-		eventType: 'work',
 		title: 'Senior Software Engineer',
 		subtitle: 'Leading frontend development for flagship product',
 		description:
 			'Responsible for architecting and implementing new features, mentoring junior developers, and improving code quality and performance. Specialized in Svelte and TypeScript.',
 		time: 'Jan 2021 - Present',
 		technologies: [
-			{ identifier: 'svelte', url: 'https://svelte.dev/' },
+			{ identifier: 'svelte', url: 'https://svelte.dev/', text: 'Svelte' },
 			{ identifier: 'TypeScript', url: 'https://www.typescriptlang.org/' },
 			{ identifier: 'Node.js', url: 'https://nodejs.org/' },
 			{ identifier: 'GraphQL', url: 'https://graphql.org/' }
 		],
-		links: [{ identifier: 'Innovatech Website', url: 'https://innovatech.example.com' }]
+		links: [{ identifier: 'svelte', url: 'https://innovatech.example.com', text: 'Innovatech' }]
 	},
 	{
-		id: 'work2',
-		eventType: 'work',
 		title: 'Software Developer',
 		subtitle: 'Full-stack development on various client projects',
 		description:
