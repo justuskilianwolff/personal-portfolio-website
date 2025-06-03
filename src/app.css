@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui";
+
+/* Use a modern sans-serif font as default */
+html,
+body {
+	background-color: #090b10;
+	color: #ffffff;
+	font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+}
+
+/* Ensure all elements inherit the white text color by default */
+* {
+	color: inherit;
+}
+
+/* Default formatting for h1 and h2 using Tailwind utility classes */
+h1 {
+	@apply text-2xl font-semibold;
+}
+
+h2 {
+	@apply text-xl font-semibold;
+}
+
+h3 {
+	@apply text-base;
+}
+
+h4 {
+	@apply font-mono;
+}
