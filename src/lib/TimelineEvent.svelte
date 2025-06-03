@@ -19,8 +19,8 @@
 	<!-- technologies -->
 	<!-- Technolgies just render the logos -->
 	{#if event.technologies && event.technologies.length > 0}
-		<h4 class="my-4">Technologies</h4>
-		<div class="mt-2 flex flex-wrap gap-2">
+		<div class="my-4 flex flex-wrap items-center gap-2">
+			<h4 class="inline-block">Technologies:</h4>
 			{#each event.technologies as tech}
 				<LogoLink url={tech.url} identifier={tech.identifier} />
 			{/each}
