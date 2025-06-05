@@ -7,7 +7,10 @@ export const projects: TimelineEvent[] = [
 		time: 'Apr 2016 - Present',
 		description:
 			"Development and commercialization of a technical aid for visually impaired people. Business registration at age 17, TV appearance on 'Simply ingenious!', utility model registrations.",
-		links: [{ url: 'https://www.steck-fix.de', text: 'Website' }]
+		links: [
+			{ url: 'https://www.steck-fix.de', text: 'Website' },
+			{ url: 'https://www.linkedin.com/company/steck-fix', text: 'LinkedIn' }
+		]
 	},
 	{
 		title: 'EV Charger Placement Optimization',
