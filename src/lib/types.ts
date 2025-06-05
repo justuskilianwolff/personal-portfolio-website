@@ -14,5 +14,5 @@ export type TimelineEvent = {
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
 	description: string;
 	technologies?: IconLink[];
-	links?: IconLink[];
+	links?: Link[];
 };
