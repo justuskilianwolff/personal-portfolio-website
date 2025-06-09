@@ -1,4 +1,5 @@
 import type { TimelineEvent } from '../types';
+import { CPLEX, Python } from './logos';
 
 export const projects: TimelineEvent[] = [
 	{
@@ -18,10 +19,7 @@ export const projects: TimelineEvent[] = [
 		time: 'Feb 2023 - Aug 2023',
 		description:
 			'Stochastic optimization for determining electric vehicle charger locations. Model development and implementation for the 15th AIMMS-MOPTA Optimization Modeling Competition. Paper in preparation.',
-		technologies: [
-			{ identifier: 'python', url: '', text: 'Python' },
-			{ identifier: 'cplex', url: '', text: 'CPLEX' }
-		]
+		skills: [Python, CPLEX]
 	},
 	{
 		title: 'Ultra-High-Speed Transportation Research',
@@ -29,7 +27,7 @@ export const projects: TimelineEvent[] = [
 		time: 'Sep 2021 - Feb 2023',
 		description:
 			'Infrastructure research on feasibility of existing railway lines for ultra-high-speed transportation. Winner of socio-economic award at EHW 2022. Published research paper on European transportation routes.',
-		technologies: [{ identifier: 'python', url: '', text: 'Python' }],
+		skills: [Python],
 		links: [{ url: 'https://doi.org/10.13140/RG.2.2.23609.24163', text: 'Publication' }]
 	},
 	{
@@ -38,10 +36,7 @@ export const projects: TimelineEvent[] = [
 		time: 'Jun 2023 - Aug 2023',
 		description:
 			'Mixed-Integer Programming approach to aircraft tail assignment optimization. Implementation using graph theory and column generation techniques. Completed with 83% grade.',
-		technologies: [
-			{ identifier: 'python', url: '', text: 'Python' },
-			{ identifier: 'cplex', url: '', text: 'CPLEX' }
-		]
+		skills: [Python, CPLEX]
 	},
 	{
 		title: 'Multi-Objective Hyperloop Optimization',
@@ -49,6 +44,6 @@ export const projects: TimelineEvent[] = [
 		time: '2022',
 		description:
 			"Travel Time, Comfort and Energy Consumption optimization for Hyperloop systems at KIT's Institute for Operations Research. Completed with perfect grade (1.0).",
-		technologies: [{ identifier: 'python', url: '', text: 'Python' }]
+		skills: [Python]
 	}
 ];

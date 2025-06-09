@@ -1,10 +1,10 @@
 <script lang="ts">
-	import LogoLink from '$lib/LogoLink.svelte';
-	import Tab from '$lib/Tab.svelte';
-	import TabGroup from '$lib/TabGroup.svelte';
 	import { education } from '$lib/data/education';
 	import { projects } from '$lib/data/projects';
 	import { work } from '$lib/data/work';
+	import Logo from '$lib/Logo.svelte';
+	import Tab from '$lib/Tab.svelte';
+	import TabGroup from '$lib/TabGroup.svelte';
 </script>
 
 <div class="profile-header flex items-center">
@@ -20,10 +20,18 @@
 		<h1>Justus Kilian Wolff</h1>
 		<h3>Hamburg, Germany</h3>
 		<div class="my-4 flex max-w-100 flex-wrap gap-4">
-			<LogoLink url="https://github.com/justuskilianwolff" identifier="github" />
-			<LogoLink url="https://www.linkedin.com/in/justus-kilian-wolff/" identifier="linkedin" />
-			<LogoLink url="https://www.instagram.com/justuskilianwolff/" identifier="instagram" />
-			<LogoLink url="mailto:hi@justuskilianwolff.com" identifier="mail" />
+			<Logo url="https://github.com/justuskilianwolff" identifier="github" hint="GitHub" />
+			<Logo
+				url="https://www.linkedin.com/in/justus-kilian-wolff/"
+				identifier="linkedin"
+				hint="LinkedIn"
+			/>
+			<Logo
+				url="https://www.instagram.com/justuskilianwolff/"
+				identifier="instagram"
+				hint="Instagram"
+			/>
+			<Logo url="mailto:hi@justuskilianwolff.com" identifier="mail" hint="Send me an e-mail :)" />
 		</div>
 	</div>
 </div>

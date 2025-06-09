@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Link from './Link.svelte';
-	import LogoLink from './LogoLink.svelte';
+	import Logo from './Logo.svelte';
 	import type { TimelineEvent } from './types';
 
 	let { event }: { event: TimelineEvent } = $props();
@@ -17,18 +17,17 @@
 	<!-- description section -->
 	<p class="mt-2">{event.description}</p>
 
-	<!-- technologies -->
-	<!-- Technolgies just render the logos -->
-	{#if event.technologies && event.technologies.length > 0}
+	<!-- Skills needed -->
+	{#if event.skills && event.skills.length > 0}
 		<div class="my-4 flex flex-wrap items-center gap-2">
-			<h4 class="inline-block">Technologies:</h4>
-			{#each event.technologies as tech (tech.identifier)}
-				<LogoLink url={tech.url} identifier={tech.identifier} text={tech.text} />
+			<h4 class="inline-block">Skills:</h4>
+			{#each event.skills as tech (tech.identifier)}
+				<Logo hint={tech.hint} identifier={tech.identifier} url={tech.url} />
 			{/each}
 		</div>
 	{/if}
 
-	<!-- links section -->
+	<!-- Links section -->
 	{#if event.links && event.links.length > 0}
 		<h4 class="my-4">Links</h4>
 		<div class="mt-2 flex flex-wrap gap-2">

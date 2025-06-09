@@ -5,14 +5,15 @@ export type Link = {
 
 export type Icon = {
 	identifier: string; // e.g., 'github', 'linkedin'
+	hint?: string;
+	url?: string;
 };
-export type IconLink = Link & Icon;
 
 export type TimelineEvent = {
 	title: string;
 	subtitle?: string;
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
 	description: string;
-	technologies?: IconLink[];
+	skills?: Icon[];
 	links?: Link[];
 };
