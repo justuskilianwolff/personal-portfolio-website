@@ -1,21 +1,16 @@
 import type { TimelineEvent } from '../types';
-import { CPLEX, Python } from './logos';
+import { Docker, Git, GitHub, MLflow, Python, TensorFlow, VSCode } from './logos';
 
 export const work: TimelineEvent[] = [
 	{
-		title: "Master's Thesis Researcher",
-		subtitle: 'Lufthansa Systems',
-		time: 'Jun 2023 - Aug 2023',
-		description:
-			'Conducted research on the tail assignment problem using Mixed-Integer Programming, graph theory and column generation. Implementation in Python with CPLEX optimization solver.',
-		skills: [Python, CPLEX, { identifier: 'latex', hint: 'LaTeX' }]
-	},
-	{
-		title: "Master's Thesis Researcher",
-		subtitle: 'Lufthansa Systems',
-		time: 'Jun 2023 - Aug 2023',
-		description:
-			'Conducted research on the tail assignment problem using Mixed-Integer Programming, graph theory and column generation. Implementation in Python with CPLEX optimization solver.',
-		skills: [Python, CPLEX, { identifier: 'latex', hint: 'LaTeX' }]
+		title: 'AI Engineer',
+		subtitle: 'audit.neo, Hamburg, Germany',
+		time: 'Jan 2024 – Present',
+		description: `<ul>
+				<li>Development of our fraud detection with deep learning</li>
+				<li>Building a chatbot system with tool-using capabilities tailored to auditors</li>
+				<li>Developed various ML/OR tools for internal use</li>
+			</ul>`,
+		skills: [Git, GitHub, Python, TensorFlow, MLflow, Docker, VSCode]
 	}
 ];

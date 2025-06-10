@@ -8,26 +8,10 @@
 	}
 
 	let { identifier, hint, url }: Props = $props();
-
-	const iconMap = {
-		linkedin: 'mdi:linkedin',
-		github: 'mdi:github',
-		instagram: 'mdi:instagram',
-		mail: 'material-symbols:mail-outline',
-		svelte: 'lineicons:svelte',
-		python: 'proicons:python',
-		cplex: 'lineicons:ibm',
-		r: 'file-icons:rstudio',
-		latex: 'file-icons:latex'
-	};
-	const iconIdentifier =
-		identifier && iconMap[identifier as keyof typeof iconMap]
-			? iconMap[identifier as keyof typeof iconMap]
-			: identifier;
 </script>
 
 {#snippet iconContent()}
-	<Icon icon={iconIdentifier} class="h-6 w-6" />
+	<Icon icon={identifier} class="h-6 w-6" />
 {/snippet}
 
 {#snippet tooltipIcon()}

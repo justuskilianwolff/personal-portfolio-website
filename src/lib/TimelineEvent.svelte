@@ -15,7 +15,7 @@
 	<p class="text-gray-500">{event.time}</p>
 
 	<!-- description section -->
-	<p class="mt-2">{event.description}</p>
+	<div class="mt-2">{@html event.description}</div>
 
 	<!-- Skills needed -->
 	{#if event.skills && event.skills.length > 0}
@@ -31,7 +31,7 @@
 	{#if event.links && event.links.length > 0}
 		<h4 class="my-4">Links</h4>
 		<div class="mt-2 flex flex-wrap gap-2">
-			<ul class="list-disc">
+			<ul>
 				{#each event.links as link}
 					<li>
 						<Link url={link.url} text={link.text} />

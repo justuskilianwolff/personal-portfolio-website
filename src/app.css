@@ -31,3 +31,7 @@ h3 {
 h4 {
 	@apply font-mono;
 }
+
+ul {
+	@apply list-disc pl-5;
+}
