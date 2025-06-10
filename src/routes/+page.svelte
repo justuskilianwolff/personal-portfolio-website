@@ -9,11 +9,8 @@
 
 <div class="profile-header flex items-center">
 	<div class="avatar mr-4">
-		<div class="w-24 rounded-full">
-			<img
-				src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp"
-				alt="Justus Kilian Wolff"
-			/>
+		<div class="relative h-24 w-24 overflow-hidden rounded-full">
+			<img src="/profile_image.jpg" alt="Justus Kilian Wolff" />
 		</div>
 	</div>
 	<div>
