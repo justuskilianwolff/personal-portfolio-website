@@ -7,7 +7,7 @@
 	import TabGroup from '$lib/TabGroup.svelte';
 </script>
 
-<div class="profile-header flex items-center">
+<div class="flex items-center">
 	<div class="avatar mr-4">
 		<div class="relative h-24 w-24 overflow-hidden rounded-full">
 			<img src="/profile_image.jpg" alt="Justus Kilian Wolff" />
@@ -17,18 +17,22 @@
 		<h1>Justus Kilian Wolff</h1>
 		<h3>Hamburg, Germany</h3>
 		<div class="my-4 flex max-w-100 flex-wrap gap-4">
-			<Logo url="https://github.com/justuskilianwolff" identifier="github" hint="GitHub" />
+			<Logo url="https://github.com/justuskilianwolff" identifier="mdi:github" hint="GitHub" />
 			<Logo
 				url="https://www.linkedin.com/in/justus-kilian-wolff/"
-				identifier="linkedin"
+				identifier="mdi:linkedin"
 				hint="LinkedIn"
 			/>
 			<Logo
 				url="https://www.instagram.com/justuskilianwolff/"
-				identifier="instagram"
+				identifier="mdi:instagram"
 				hint="Instagram"
 			/>
-			<Logo url="mailto:hi@justuskilianwolff.com" identifier="mail" hint="Send me an e-mail :)" />
+			<Logo
+				url="mailto:hi@justuskilianwolff.com"
+				identifier="material-symbols:mail-outline"
+				hint="Send me an e-mail :)"
+			/>
 		</div>
 	</div>
 </div>
