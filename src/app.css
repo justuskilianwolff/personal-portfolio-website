@@ -35,3 +35,7 @@ h4 {
 ul {
 	@apply list-disc pl-5;
 }
+
+a {
+	@apply underline;
+}
