@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { education } from '$lib/data/education';
 	import { projects } from '$lib/data/projects';
 	import { work } from '$lib/data/work';
@@ -10,7 +11,7 @@
 <div class="flex items-center">
 	<div class="avatar mr-4">
 		<div class="relative h-24 w-24 overflow-hidden rounded-full">
-			<img src="/profile_image.jpg" alt="Justus Kilian Wolff" />
+			<img src="{base}/profile_image.jpg" alt="Justus Kilian Wolff" />
 		</div>
 	</div>
 	<div>
