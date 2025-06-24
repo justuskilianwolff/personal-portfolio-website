@@ -47,7 +47,7 @@ export const Docker: Icon = {
 	url: 'https://www.docker.com/'
 };
 export const VSCode: Icon = {
-	identifier: 'mdi:microsoft-visual-studio',
+	identifier: 'bxl:visual-studio',
 	hint: 'VS Code',
 	url: 'https://code.visualstudio.com/'
 };
