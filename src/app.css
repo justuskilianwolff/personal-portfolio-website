@@ -7,7 +7,7 @@ html,
 body {
 	background-color: #090b10;
 	color: #ffffff;
-	font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+	font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Liberation Sans', sans-serif;
 }
 
 /* Ensure all elements inherit the white text color by default */
