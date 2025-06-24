@@ -2,6 +2,7 @@ import type { TimelineEvent } from '../types';
 import {
 	CPLEX,
 	GraphTheory,
+	LaTeX,
 	MixedIntegerProgramming,
 	Python,
 	Svelte,
@@ -12,22 +13,43 @@ import {
 export const projects: TimelineEvent[] = [
 	{
 		title: 'Personal Portfolio Website',
-		subtitle: 'Personal Project',
-		time: '2026',
+		subtitle: "Who wouldn't be interested in what I do!?",
+		time: '2025',
 		description: `I always wanted to build my own portfolio website, mainly to have a public domain for making my HomeAssistant instance available online.
-Turns out I couldn't use a subdomain and had to buy a second website. Nevertheless, I enjoyed this project—built with Svelte, AI, and passion.`,
-		skills: [Svelte, TypeScript, Tailwind], // Replace with relevant skills/logos if available
+Turns out I couldn't use a subdomain and had to buy a second website. Nevertheless, I enjoyed this project — built with Svelte, AI, and passion.`,
+		skills: [Svelte, TypeScript, Tailwind],
 		links: [
-			{ url: 'https://github.com/justuswolff/personal-website', text: 'Source Code @ GitHub' }
-		] //TODO: make repo public
+			{
+				url: 'https://github.com/justuskilianwolff/personal-portfolio-website',
+				text: 'Source Code @ GitHub'
+			}
+		]
+	},
+	{
+		title: 'Dotfiles & Shell Configuration',
+		subtitle: 'Syncing shell and system configs across machines',
+		time: '2024 – Present',
+		description: `Simple repo to sync my shell and system configs (zsh, Homebrew, iTerm2, Karabiner, Hammerspoon) between devices. No stow/chezmoi yet, just scripts and docs for setup and shortcuts.`,
+
+		links: [
+			{
+				url: 'https://github.com/justuskilianwolff/dotfiles',
+				text: 'Source Code @ GitHub'
+			}
+		]
 	},
 	{
 		title: 'EV Charger Placement Optimization',
 		subtitle: 'AIMMS-MOPTA Competition & Research',
 		time: 'Feb 2023 - Aug 2023',
-		description: `Stochastic optimization for determining electric vehicle charger locations. Developed and implemented a model for the 15th AIMMS-MOPTA Optimization Modeling Competition. Paper in preparation.`,
-		skills: [Python, CPLEX],
-		links: [] //TODO: add links to repo
+		description: `Stochastic optimization for determining electric vehicle charger locations. Developed and implemented a model for the 15th AIMMS-MOPTA Optimization Modeling Competition. Paper uploaded to repo and submitted to journal.`,
+		skills: [Python, CPLEX, LaTeX],
+		links: [
+			{
+				url: 'https://github.com/justuskilianwolff/ev-station-solver',
+				text: 'Source Code @ GitHub'
+			}
+		]
 	},
 	{
 		title: 'Master’s Thesis: Tail Assignment Problem',
@@ -49,14 +71,16 @@ Turns out I couldn't use a subdomain and had to buy a second website. Neverthele
 	<li>Published research paper on European transportation routes.</li>
 	<li>Bachelor’s thesis: Multi-objective optimization of travel time, comfort, and energy consumption for Hyperloop systems at KIT’s Institute for Operations Research. Completed with perfect grade (1.0).</li>
 </ul>`,
-		skills: [Python],
-		links: [{ url: 'https://doi.org/10.13140/RG.2.2.23609.24163', text: 'Publication' }] //TODO add link to code etc
-	},
-	{
-		title: 'Steck-Fix: Technical Aid for the Visually Impaired',
-		subtitle: 'Founder',
-		time: 'Apr 2016 - Present',
-		description: `Development and commercialization of a technical aid for visually impaired people. Registered the business at age 17, appeared on TV ("Simply Ingenious!"), and obtained utility model registrations.`,
-		links: [] // TODO: add links
+		skills: [Python, LaTeX],
+		links: [
+			{
+				url: `https://www.researchgate.net/publication/367807003_Using_Europe's_Railway_Corridors_for_Ultra-High-Speed_Transportation_Trajectory_Modeling_and_Assessment`,
+				text: 'Pre Print @ ResearchGate'
+			},
+			{
+				url: 'https://github.com/mu-zero-HYPERLOOP/c3_infrastructure_optimization',
+				text: 'Source Code @ GitHub'
+			}
+		]
 	}
 ];

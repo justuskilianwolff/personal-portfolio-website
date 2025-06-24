@@ -39,9 +39,9 @@
 </div>
 
 <p class="mt-4">
-	Hey, I am Justus, 26 years old and from Hamburg. I'm love working on deep learning and operational
-	research challenges. Passionate about machine learning, optimisation, and all things computer
-	science - always exploring and building :)
+	Hey, I am Justus, 26 years old and from Hamburg. I love working on operational
+	research and machine learning challenges. Passionate about all things computer
+	science - always exploring and building! Feel free to drop me a message :)
 </p>
 
 <TabGroup>

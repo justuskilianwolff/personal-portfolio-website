@@ -7,7 +7,7 @@ export const work: TimelineEvent[] = [
 		subtitle: 'audit.neo, Hamburg, Germany',
 		time: 'Jan 2024 – Present',
 		description: `<ul>
-				<li>Development of our fraud detection with deep learning</li>
+				<li>Development of our fraud detection with an autoencoder architecture</li>
 				<li>Building a chatbot system with tool-using capabilities tailored to auditors</li>
 				<li>Developed various ML/OR tools for internal use</li>
 			</ul>`,
