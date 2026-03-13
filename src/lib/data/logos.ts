@@ -91,3 +91,9 @@ export const Statistics: Icon = {
 	hint: 'Statistics',
 	url: 'https://en.wikipedia.org/wiki/Statistics'
 };
+
+export const REST: Icon = {
+	identifier: 'mdi:api',
+	hint: 'REST API',
+	url: 'https://en.wikipedia.org/wiki/REST'
+};

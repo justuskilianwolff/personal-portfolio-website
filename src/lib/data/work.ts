@@ -9,6 +9,8 @@ import {
 	MixedIntegerProgramming,
 	MLflow,
 	Python,
+	REST,
+	Svelte,
 	TensorFlow,
 	VSCode
 } from './logos';
@@ -16,10 +18,19 @@ import {
 export const work: TimelineEvent[] = [
 	{
 		title: 'Founder',
-		subtitle: 'Pre-launch',
+		subtitle: 'bools, Hamburg, Germany',
 		time: 'Nov 2025 - Present',
-		description: `Building an optimisation product — launching soon!`,
-		skills: [Python, MixedIntegerProgramming]
+		description: `Building bools: a mathematical optimisation platform for everyone.
+			<ul>
+				<li>Decisions are fully transparent: problems are expressed in a human-readable modeling language: see exactly what's being optimised, what constraints apply, and why a decision was made</li>
+				<li>Solver capability available via API or interface: no specialist hiring, no custom projects, no solver setup</li>
+				<li>AI assistant translates plain-language requirements into a structured model</li>
+			</ul>`,
+		skills: [Python, MixedIntegerProgramming, REST, Svelte, Docker],
+		links: [
+			{ url: 'https://bools.io', text: 'bools.io' },
+			{ url: 'https://www.linkedin.com/company/bools-io/', text: 'LinkedIn' }
+		]
 	},
 	{
 		title: 'AI Engineer',
