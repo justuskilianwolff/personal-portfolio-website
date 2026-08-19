@@ -75,7 +75,6 @@
 <section class="relative min-h-svh overflow-hidden border-b border-white/8">
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<OptimizationContour
-			hideDot={true}
 			fadeFromOptimum={true}
 			peakOpacity={0.66}
 			edgeOpacity={0.09}

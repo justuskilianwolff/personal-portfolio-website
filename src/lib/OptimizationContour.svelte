@@ -1,22 +1,33 @@
 <script lang="ts">
+	const DEFAULT_BASIN_SEED = 0x6d2b79f5;
+
+	function createBasinSeed() {
+		if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+			const values = new Uint32Array(1);
+			crypto.getRandomValues(values);
+			return values[0];
+		}
+		return Math.floor(Math.random() * 0x100000000);
+	}
+
+	const defaultBasinSeed = typeof window === 'undefined' ? DEFAULT_BASIN_SEED : createBasinSeed();
+
 	let {
-		dotPosition = $bindable({ x: 0.86, y: 0.22 }),
+		basinSeed = defaultBasinSeed,
 		optimumPosition = { x: 0.86, y: 0.22 },
-		hideDot = false,
 		fadeFromOptimum = false,
 		peakOpacity = 0.4,
 		edgeOpacity = 0.04,
 		falloffRate = 2.5,
 		class: className = ''
 	}: {
-		dotPosition?: { x: number; y: number };
 		optimumPosition?: { x: number; y: number };
-		hideDot?: boolean;
 		fadeFromOptimum?: boolean;
 		peakOpacity?: number;
 		edgeOpacity?: number;
 		falloffRate?: number;
 		class?: string;
+		basinSeed?: number;
 	} = $props();
 
 	type Point = { x: number; y: number };
@@ -26,9 +37,9 @@
 	const OPTIMUM = $derived(optimumPosition);
 
 	// ── Random basin generator ───────────────────────────────────────────
-	function generateBasins(optimum: Point): Basin[] {
+	function generateBasins(optimum: Point, basinSeed: number): Basin[] {
 		const basins: Basin[] = [];
-		let seed = 0x6d2b79f5;
+		let seed = basinSeed >>> 0;
 		const random = () => {
 			seed = Math.imul(seed ^ (seed >>> 15), 1 | seed);
 			seed += Math.imul(seed ^ (seed >>> 7), 61 | seed) ^ seed;
@@ -75,7 +86,7 @@
 		return basins;
 	}
 
-	const basins = $derived(generateBasins(OPTIMUM));
+	const basins = $derived(generateBasins(OPTIMUM, basinSeed));
 
 	function terrainHeight(x: number, y: number) {
 		let h = -0.16 * x + 0.04 * y;
@@ -218,40 +229,6 @@
 				}
 				ctx.stroke();
 			}
-		}
-
-		// ── Find true minimum near OPTIMUM via local refinement ─────────
-		let bestX = OPTIMUM.x;
-		let bestY = OPTIMUM.y;
-		let bestVal = terrainHeight(bestX, bestY);
-		const searchR = 0.06;
-		const steps = 60;
-		for (let j = 0; j <= steps; j++) {
-			for (let i = 0; i <= steps; i++) {
-				const sx = OPTIMUM.x - searchR + (2 * searchR * i) / steps;
-				const sy = OPTIMUM.y - searchR + (2 * searchR * j) / steps;
-				const v = terrainHeight(sx, sy);
-				if (v < bestVal) {
-					bestVal = v;
-					bestX = sx;
-					bestY = sy;
-				}
-			}
-		}
-		const opt = px({ x: bestX, y: bestY });
-
-		// Dot
-		if (!hideDot) {
-			ctx.beginPath();
-			ctx.arc(opt.x, opt.y, 9, 0, Math.PI * 2);
-			ctx.fillStyle = foreground;
-			ctx.globalAlpha = 0.9;
-			ctx.fill();
-		}
-
-		// Export normalized dot position (guard to avoid unnecessary re-renders)
-		if (bestX !== dotPosition.x || bestY !== dotPosition.y) {
-			dotPosition = { x: bestX, y: bestY };
 		}
 
 		ctx.globalAlpha = 1;

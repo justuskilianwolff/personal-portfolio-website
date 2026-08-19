@@ -6,7 +6,7 @@
 <div data-og-card class="bg-background text-text relative h-[630px] w-[1200px] overflow-hidden">
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<OptimizationContour
-			hideDot={true}
+			basinSeed={0x4f1a2b7c}
 			fadeFromOptimum={true}
 			peakOpacity={0.66}
 			edgeOpacity={0.09}
