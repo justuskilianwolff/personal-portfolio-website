@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 </script>
 
-<header class="sticky top-0 z-50 border-b border-white/10 bg-background">
+<header class="bg-background sticky top-0 z-50 border-b border-white/10">
 	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-8">
 		<a
 			href={resolve('/')}
