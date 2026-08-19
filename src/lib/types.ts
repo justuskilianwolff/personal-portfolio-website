@@ -9,11 +9,16 @@ export type Icon = {
 	url?: string;
 };
 
+export type TimelineDescription = {
+	text?: string;
+	bullets?: string[];
+};
+
 export type TimelineEvent = {
 	title: string;
 	subtitle?: string;
 	time: string; // Simple string e.g., "2020-2022", "Jan 2023 - Present"
-	description: string;
+	description?: TimelineDescription;
 	skills?: Icon[];
 	links?: Link[];
 };

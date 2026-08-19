@@ -16,25 +16,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 8
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 24
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
-      - name: build
-        run: npm run build
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
 
-      - name: Upload Artifacts
+      - name: Check
+        run: pnpm check
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/'

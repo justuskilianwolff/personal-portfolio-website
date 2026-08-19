@@ -1,13 +1,22 @@
 <script lang="ts">
 	import '../app.css';
+	import SiteFooter from '$lib/SiteFooter.svelte';
+	import SiteHeader from '$lib/SiteHeader.svelte';
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<title>Justus Kilian Wolff</title>
-</svelte:head>
+<a
+	href="#main-content"
+	class="bg-accent text-accent-ink sr-only fixed top-3 left-3 z-[100] px-3 py-2 text-sm font-medium focus:not-sr-only"
+>
+	Skip to content
+</a>
 
-<div class="m-5 mx-auto min-h-screen w-full max-w-4xl px-4 pt-16">
+<SiteHeader />
+
+<main id="main-content">
 	{@render children()}
-</div>
+</main>
+
+<SiteFooter />

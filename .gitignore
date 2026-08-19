@@ -8,6 +8,13 @@ node_modules
 /.svelte-kit
 /build
 
+# Package managers
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+bun.lock
+bun.lockb
+
 # OS
 .DS_Store
 Thumbs.db
@@ -22,9 +29,8 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-
 # vscode
 .vscode
 
-# roo code
-.roo
+# playwright
+.playwright-mcp/

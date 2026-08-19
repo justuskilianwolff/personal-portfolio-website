@@ -1,38 +1,39 @@
-# sv
+# Justus Kilian Wolff — Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A statically generated portfolio for an optimisation and machine-learning engineer. It is built with SvelteKit 2, Svelte 5, Tailwind CSS 4, and deployed to GitHub Pages.
 
-## Creating a project
+## Current status
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Static, prerendered SvelteKit site using `@sveltejs/adapter-static`
+- Homepage, experience, education, and legal routes
+- GitHub Pages deployment from `main`
+- Package manager: pnpm 11.20.0
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Requirements
 
-# create a new project in my-app
-npx sv create my-app
+- Node.js 24 or newer
+- pnpm 11.20.0
+
+```sh
+pnpm install --frozen-lockfile
+pnpm exec playwright install chromium
 ```
 
-## Developing
+Use pnpm for all dependency and script commands. Do not create npm, Yarn, or Bun lockfiles.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Development
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+pnpm dev
+pnpm check
+pnpm lint
+pnpm build
+pnpm preview
+pnpm generate:og
 ```
 
-## Building
+`pnpm generate:og` captures the internal `/og` route with Playwright and writes the Open Graph card to `static/og-image.png`; `pnpm build` runs it automatically. `pnpm check` runs Svelte and TypeScript diagnostics. `pnpm lint` verifies Prettier formatting and ESLint rules. `pnpm format` applies formatting changes.
 
-To create a production version of your app:
+## Deployment
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The GitHub Actions workflow in `.github/workflows/deploy.yaml` installs dependencies with pnpm, validates the project, builds the static site, and deploys `build/` to GitHub Pages.

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /og
+Allow: /
+
+Sitemap: https://justuskilianwolff.com/sitemap.xml
