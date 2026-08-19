@@ -9,7 +9,7 @@
 	<img
 		src={asset('/profile_image.jpg')}
 		alt="Justus Kilian Wolff"
-		class="aspect-[4/5] w-full object-cover object-[45%_50%] saturate-[0.72]"
+		class="aspect-[4/5] w-full object-cover object-[45%_50%]"
 		width="576"
 		height="720"
 		{loading}
