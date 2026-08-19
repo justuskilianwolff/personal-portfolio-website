@@ -79,7 +79,7 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="relative min-h-[calc(100vh-4rem)] overflow-hidden border-b border-white/8">
+<section class="relative min-h-svh overflow-hidden border-b border-white/8">
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<OptimizationContour
 			hideDot={true}
@@ -98,7 +98,7 @@
 	</div>
 
 	<div
-		class="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-[90rem] flex-col justify-center px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+		class="relative z-10 mx-auto flex min-h-svh max-w-[90rem] flex-col justify-center px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
 	>
 		<div class="max-w-full translate-y-[5vh]">
 			<p class="eyebrow">Optimisation & machine learning</p>
