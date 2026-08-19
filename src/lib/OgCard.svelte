@@ -20,13 +20,13 @@
 
 	<div class="relative z-10 flex h-full flex-col px-[72px] pt-[68px] pb-[58px]">
 		<p class="text-accent font-mono text-[16px] font-medium tracking-[0.09em] uppercase">
-			Optimisation & machine learning
+			Machine learning & optimisation
 		</p>
 
 		<h1
 			class="mt-[54px] max-w-[690px] font-mono text-[50px] leading-[0.96] font-semibold tracking-[-0.065em]"
 		>
-			Decision and prediction<br />systems for complex<br />operations.
+			Prediction and decision<br />systems for complex<br />operations.
 		</h1>
 
 		<div class="border-border mt-auto flex items-end justify-between border-t pt-[24px]">

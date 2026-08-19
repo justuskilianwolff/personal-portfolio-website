@@ -52,30 +52,23 @@
 </script>
 
 <svelte:head>
-	<title>Justus Wolff | Optimisation & ML</title>
+	<title>Justus Wolff | Machine Learning & Optimisation</title>
 	<meta
 		name="description"
-		content="Independent optimisation and machine learning engineer building forecasting, planning, scheduling, and decision systems for complex operations."
+		content="Independent machine-learning and optimisation engineer building forecasting, planning, scheduling, and operational decision systems."
 	/>
 	<link rel="canonical" href="https://justuskilianwolff.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Decision and prediction systems for complex operations" />
+	<meta property="og:title" content="Prediction and decision systems for complex operations" />
 	<meta
 		property="og:description"
-		content="Optimisation and machine learning for forecasting, planning, and operational decision-making."
+		content="Machine learning and optimisation for forecasting, planning, and operational decision-making."
 	/>
 	<meta property="og:url" content="https://justuskilianwolff.com/" />
-	<meta property="og:image" content="https://justuskilianwolff.com/og-image.png" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Justus Kilian Wolff — Optimisation and machine learning" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Decision and prediction systems for complex operations" />
+	<meta name="twitter:title" content="Prediction and decision systems for complex operations" />
 	<meta
 		name="twitter:description"
-		content="Optimisation and machine learning for forecasting, planning, and operational decision-making."
+		content="Machine learning and optimisation for forecasting, planning, and operational decision-making."
 	/>
-	<meta name="twitter:image" content="https://justuskilianwolff.com/og-image.png" />
 </svelte:head>
 
 <!-- Hero -->
@@ -101,14 +94,14 @@
 		class="relative z-10 mx-auto flex min-h-svh max-w-[90rem] flex-col justify-center px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
 	>
 		<div class="max-w-full translate-y-[5vh]">
-			<p class="eyebrow">Optimisation & machine learning</p>
+			<p class="eyebrow">Machine learning & optimisation</p>
 			<h1
 				class="mt-6 max-w-full font-mono text-[clamp(3rem,6vw,5.55rem)] leading-[0.94] font-semibold tracking-[-0.065em]"
 			>
-				Decision and prediction systems for complex operations.
+				Prediction and decision systems for complex operations.
 			</h1>
 			<p class="text-muted mt-8 max-w-2xl text-lg leading-8 sm:text-xl sm:leading-9">
-				I use optimisation and machine learning to turn operational data, objectives, and
+				I use machine learning and optimisation to turn operational data, objectives, and
 				constraints into models and systems that teams can use with confidence.
 			</p>
 			<div class="mt-9 flex flex-wrap gap-3">
@@ -116,7 +109,7 @@
 					class="button-primary px-5 py-3"
 					href="mailto:hi@justuskilianwolff.com?subject=Project%20enquiry"
 				>
-					Discuss a project
+					Let's build something
 				</a>
 				<a class="button-secondary px-5 py-3" href="#profile">About me</a>
 			</div>
@@ -250,10 +243,10 @@
 				</p>
 			</div>
 			<div class="mt-10 lg:mt-0">
-				<h2 class="section-heading">Have a prediction or decision system worth improving?</h2>
+				<h2 class="section-heading">Have a prediction or decision system worth building?</h2>
 				<p class="text-muted mt-6 max-w-2xl text-lg leading-8">
 					Tell me what you are trying to forecast, plan, or improve. You do not need to know whether
-					machine learning or optimisation is the right approach, because we’ll figure it out
+					machine learning or optimisation is the right approach, because we'll figure it out
 					together :)
 				</p>
 				<a
