@@ -3,6 +3,7 @@
 	import OfferTabs from '$lib/OfferTabs.svelte';
 	import OptimizationContour from '$lib/OptimizationContour.svelte';
 	import ProfilePortrait from '$lib/ProfilePortrait.svelte';
+	import { onMount } from 'svelte';
 
 	const selectedWork = [
 		{
@@ -49,6 +50,46 @@
 		'MSc Operational Research with Data Science',
 		'Published optimisation research'
 	];
+
+	let heroViewportHeight = $state<string>();
+
+	onMount(() => {
+		const mobileViewport = window.matchMedia('(hover: none) and (pointer: coarse)');
+		const visualViewport = window.visualViewport;
+		const getViewportWidth = () => visualViewport?.width ?? window.innerWidth;
+		let viewportWidth = getViewportWidth();
+		let resizeTimer: ReturnType<typeof setTimeout>;
+
+		const lockViewportHeight = () => {
+			viewportWidth = getViewportWidth();
+			heroViewportHeight = mobileViewport.matches
+				? `${Math.round(visualViewport?.height ?? window.innerHeight)}px`
+				: undefined;
+		};
+
+		const handleResize = () => {
+			const nextViewportWidth = getViewportWidth();
+
+			// Browser chrome changes only the height. Ignore it so the hero stays stable while scrolling.
+			if (Math.abs(nextViewportWidth - viewportWidth) < 2) return;
+
+			viewportWidth = nextViewportWidth;
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(lockViewportHeight, 150);
+		};
+
+		lockViewportHeight();
+		window.addEventListener('resize', handleResize);
+		visualViewport?.addEventListener('resize', handleResize);
+		mobileViewport.addEventListener('change', lockViewportHeight);
+
+		return () => {
+			clearTimeout(resizeTimer);
+			window.removeEventListener('resize', handleResize);
+			visualViewport?.removeEventListener('resize', handleResize);
+			mobileViewport.removeEventListener('change', lockViewportHeight);
+		};
+	});
 </script>
 
 <svelte:head>
@@ -72,7 +113,10 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="relative min-h-svh overflow-hidden border-b border-white/8">
+<section
+	style:--hero-viewport-height={heroViewportHeight}
+	class="relative overflow-hidden border-b border-white/8"
+>
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<OptimizationContour
 			fadeFromOptimum={true}
@@ -90,9 +134,9 @@
 	</div>
 
 	<div
-		class="relative z-10 mx-auto flex min-h-svh max-w-[90rem] flex-col justify-center px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+		class="relative z-10 mx-auto flex min-h-[calc(var(--hero-viewport-height,100svh)-4rem)] max-w-[90rem] flex-col justify-center px-5 py-[clamp(3rem,8svh,6rem)] sm:px-8 lg:min-h-svh lg:py-24"
 	>
-		<div class="max-w-full translate-y-[5vh]">
+		<div class="max-w-full lg:translate-y-[5vh]">
 			<p class="eyebrow">Machine learning & optimisation</p>
 			<h1
 				class="mt-6 max-w-full font-mono text-[clamp(3rem,6vw,5.55rem)] leading-[0.94] font-semibold tracking-[-0.065em]"
