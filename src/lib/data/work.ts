@@ -77,11 +77,11 @@ export const experience: TimelineEvent[] = [
 
 export const projects: TimelineEvent[] = [
 	{
-		title: 'Personal Portfolio Website',
-		subtitle: "Who wouldn't be interested in what I do!?",
-		time: '2025',
+		title: 'Personal Website & Freelance Presence',
+		subtitle: 'An overview of my work',
+		time: '2025 - Present',
 		description: {
-			text: "I always wanted to build my own portfolio website, mainly to have a public domain for making my Home Assistant instance available online. Turns out I couldn't use a subdomain and had to buy a second website. Nevertheless, I enjoyed building it with Svelte, AI, and passion."
+			text: 'The place where I share what I have been working on and how I approach optimisation and machine learning. It is also the home of my freelance presence.'
 		},
 		skills: [Svelte, TypeScript, Tailwind],
 		links: [
