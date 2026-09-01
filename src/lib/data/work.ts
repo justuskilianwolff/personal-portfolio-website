@@ -1,21 +1,20 @@
 import type { TimelineEvent } from '../types';
 import {
-	CPLEX,
 	Docker,
 	Git,
 	GitHub,
-	GraphTheory,
-	LaTeX,
 	MixedIntegerProgramming,
 	MLflow,
 	Python,
 	REST,
 	Svelte,
+	Tailwind,
 	TensorFlow,
+	TypeScript,
 	VSCode
 } from './logos';
 
-export const work: TimelineEvent[] = [
+export const experience: TimelineEvent[] = [
 	{
 		title: 'Founder',
 		subtitle: 'bools.io, Hamburg, Germany',
@@ -49,43 +48,6 @@ export const work: TimelineEvent[] = [
 		skills: [Git, GitHub, Python, TensorFlow, MLflow, Docker, VSCode]
 	},
 	{
-		title: "Master's Thesis",
-		subtitle: 'Lufthansa Systems, Raunheim, Germany',
-		time: 'Jun 2023 - Aug 2023',
-		description: {
-			text: 'Developed a solution approach for the tail-assignment problem, which matches aircraft to flights, using problem-specific graph algorithms and column generation.'
-		},
-		skills: [Python, CPLEX, MixedIntegerProgramming, GraphTheory]
-	},
-	{
-		title: 'Research Team Member',
-		subtitle: 'mu-zero HYPERLOOP, Karlsruhe, Germany',
-		time: 'Oct 2021 - Sep 2022',
-		description: {
-			text: 'Researched the feasibility of adapting existing railway infrastructure for ultra-high-speed transportation'
-		},
-		skills: [Python, LaTeX],
-		links: [
-			{
-				url: `https://www.researchgate.net/publication/367807003_Using_Europe's_Railway_Corridors_for_Ultra-High-Speed_Transportation_Trajectory_Modeling_and_Assessment`,
-				text: 'Preprint @ ResearchGate'
-			},
-			{
-				url: 'https://github.com/mu-zero-HYPERLOOP/c3_infrastructure_optimization',
-				text: 'Source Code @ GitHub'
-			}
-		]
-	},
-	{
-		title: 'Research Assistant',
-		subtitle: 'Institute of Product Engineering at KIT, Karlsruhe, Germany',
-		time: 'Jul 2021 - Dec 2021',
-		description: {
-			text: 'Literature research and comparative analysis of product development approaches'
-		},
-		skills: []
-	},
-	{
 		title: 'Intern IT Management in Logistics and Production',
 		subtitle: 'Porsche AG, Zuffenhausen, Germany',
 		time: 'Sep 2020 - Dec 2020',
@@ -100,15 +62,6 @@ export const work: TimelineEvent[] = [
 		skills: []
 	},
 	{
-		title: 'Teaching Assistant',
-		subtitle: 'Karlsruhe Institute of Technology (KIT)',
-		time: 'Apr 2020 - Aug 2020',
-		description: {
-			text: 'Prepared and led tutorial sessions for "Introduction to Operations Research I"'
-		},
-		skills: [MixedIntegerProgramming, GraphTheory]
-	},
-	{
 		title: 'Intern Market Research and Product Evaluation',
 		subtitle: 'HorseAnalytics, Hamburg, Germany',
 		time: 'Jun 2018 - Aug 2018',
@@ -119,5 +72,63 @@ export const work: TimelineEvent[] = [
 		subtitle: 'NÜWIEL, Hamburg, Germany',
 		time: 'May 2018 - Jun 2018',
 		skills: []
+	}
+];
+
+export const projects: TimelineEvent[] = [
+	{
+		title: 'Personal Portfolio Website',
+		subtitle: "Who wouldn't be interested in what I do!?",
+		time: '2025',
+		description: {
+			text: "I always wanted to build my own portfolio website, mainly to have a public domain for making my Home Assistant instance available online. Turns out I couldn't use a subdomain and had to buy a second website. Nevertheless, I enjoyed building it with Svelte, AI, and passion."
+		},
+		skills: [Svelte, TypeScript, Tailwind],
+		links: [
+			{
+				url: 'https://github.com/justuskilianwolff/personal-portfolio-website',
+				text: 'Source Code @ GitHub'
+			}
+		]
+	},
+	{
+		title: 'Dotfiles & Shell Configuration',
+		subtitle: 'Syncing shell and system configs across machines',
+		time: '2024 - Present',
+		description: {
+			text: 'Simple repo to sync my shell and system configs (zsh, Homebrew, iTerm2, Karabiner, Hammerspoon) between devices. No stow/chezmoi yet, just scripts and docs for setup and shortcuts.'
+		},
+		links: [
+			{
+				url: 'https://github.com/justuskilianwolff/dotfiles',
+				text: 'Source Code @ GitHub'
+			}
+		]
+	},
+	{
+		title: 'Steck-Fix',
+		subtitle: 'Own Start-up: Technical Aid for Visually Impaired People',
+		time: 'Apr 2016 - Apr 2024',
+		description: {
+			bullets: [
+				'Development of a technical aid for visually impaired people',
+				'Sales on my website and at wholesalers',
+				'Registered the business at age 17',
+				'TV appearance at "Simply ingenious!" ("Einfach genial!")',
+				'Utility model registrations',
+				'Inspired by my grandmother in 2014'
+			]
+		},
+		skills: [],
+		links: [
+			{
+				url: 'https://intranet.tuhh.de/presse/pressemitteilung_einzeln.php?id=10327&Lang=de',
+				text: 'Press Release @ TUHH'
+			},
+			{
+				url: 'https://www.abendblatt.de/hamburg/harburg/article207166079/Schueler-Justus-Wolff-ist-ein-Erfinder.html',
+				text: 'Article @ Abendblatt'
+			}
+		]
 	}
 ];

@@ -30,8 +30,8 @@
 			organisation: 'Lufthansa Systems',
 			description:
 				'Applied problem-specific graph algorithms and column generation to the aircraft tail-assignment problem.',
-			href: resolve('/experience'),
-			linkLabel: 'Read about the work'
+			href: resolve('/academics#research'),
+			linkLabel: 'Read about the research'
 		},
 		{
 			label: 'Published research',
@@ -269,8 +269,8 @@
 			{/each}
 		</div>
 
-		<a class="button-secondary mt-10 inline-block px-4 py-2.5" href={resolve('/experience')}>
-			View full experience
+		<a class="button-secondary mt-10 inline-block px-4 py-2.5" href={resolve('/work')}>
+			View all work
 		</a>
 	</div>
 </section>

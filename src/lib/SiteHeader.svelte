@@ -18,8 +18,8 @@
 			aria-label="Primary navigation"
 			class="flex shrink-0 items-center gap-2 font-mono text-[0.68rem] sm:gap-6 sm:text-xs"
 		>
-			<a class="nav-link" href={resolve('/experience')}>Experience</a>
-			<a class="nav-link" href={resolve('/education')}>Education</a>
+			<a class="nav-link" href={resolve('/work')}>Work</a>
+			<a class="nav-link" href={resolve('/academics')}>Academics</a>
 			<a
 				class="button-primary px-2.5 py-2 text-xs sm:px-4"
 				href="mailto:hi@justuskilianwolff.com?subject=Project%20enquiry"
