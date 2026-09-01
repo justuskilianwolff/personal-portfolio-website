@@ -60,7 +60,8 @@ export const experience: TimelineEvent[] = [
 			]
 		},
 		skills: []
-	},
+	}
+	/* Early internships, hidden for now.
 	{
 		title: 'Intern Market Research and Product Evaluation',
 		subtitle: 'HorseAnalytics, Hamburg, Germany',
@@ -73,6 +74,7 @@ export const experience: TimelineEvent[] = [
 		time: 'May 2018 - Jun 2018',
 		skills: []
 	}
+	*/
 ];
 
 export const projects: TimelineEvent[] = [
