@@ -12,9 +12,9 @@
 	--border: hsl(213 22% 90% / 0.13);
 	--border-strong: hsl(213 22% 90% / 0.24);
 	--text: hsl(210 10% 92%);
-	--muted: hsl(214 7% 62%);
-	--accent: hsl(214 18% 61%);
-	--accent-strong: hsl(212 17% 73%);
+	--muted: hsl(214 7% 84%);
+	--accent: hsl(214 18% 72%);
+	--accent-strong: hsl(212 17% 82%);
 	--accent-ink: hsl(213 20% 9%);
 	font-family: 'IBM Plex Sans', sans-serif;
 	color-scheme: dark;

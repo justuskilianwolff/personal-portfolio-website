@@ -120,8 +120,8 @@
 	<div class="pointer-events-none absolute inset-0" aria-hidden="true">
 		<OptimizationContour
 			fadeFromOptimum={true}
-			peakOpacity={0.66}
-			edgeOpacity={0.09}
+			peakOpacity={0.86}
+			edgeOpacity={0.22}
 			falloffRate={1.3}
 			optimumPosition={{ x: 0.84, y: 0.25 }}
 		/>
