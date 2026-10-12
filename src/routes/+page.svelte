@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import OfferTabs from '$lib/OfferTabs.svelte';
 	import OptimizationContour from '$lib/OptimizationContour.svelte';
 	import ProfilePortrait from '$lib/ProfilePortrait.svelte';
@@ -41,6 +41,14 @@
 				'Co-developed and implemented a stochastic facility-location model. The research was published in Computers & Operations Research.',
 			href: 'https://www.sciencedirect.com/science/article/pii/S0305054825003181',
 			linkLabel: 'View publication'
+		}
+	];
+
+	const customers = [
+		{
+			name: 'Willidrop',
+			logo: asset('/logos/willidrop.svg'),
+			href: 'https://willidrop.com/'
 		}
 	];
 
@@ -155,6 +163,32 @@
 					Let's build something
 				</a>
 				<a class="button-secondary px-5 py-3" href="#profile">About me</a>
+			</div>
+
+			<!-- Customers -->
+			<div
+				class="border-border mt-14 flex max-w-md flex-wrap items-center gap-x-6 gap-y-3 border-t pt-6"
+			>
+				<p class="text-muted font-mono text-[0.65rem] tracking-wider whitespace-nowrap uppercase">
+					Trusted by
+				</p>
+				<ul class="flex flex-wrap items-center gap-x-8 gap-y-4">
+					{#each customers as customer (customer.name)}
+						<li>
+							<!-- Customer entries contain trusted external URLs. -->
+							<!-- eslint-disable svelte/no-navigation-without-resolve -->
+							<a class="group block" href={customer.href} target="_blank" rel="noreferrer">
+								<img
+									class="h-6 w-auto opacity-60 transition-opacity group-hover:opacity-100"
+									src={customer.logo}
+									alt={customer.name}
+								/>
+							</a>
+							<!-- eslint-enable svelte/no-navigation-without-resolve -->
+						</li>
+					{/each}
+				</ul>
+				<p class="text-muted font-mono text-xs whitespace-nowrap">and others</p>
 			</div>
 		</div>
 	</div>
